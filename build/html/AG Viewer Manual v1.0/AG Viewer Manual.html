@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AG Viewer Manual &mdash; AgensGraph Guide &amp; Manual 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="AgensGraph Operations Manual" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> AgensGraph Guide & Manual
+            <img src="../_static/bitnine_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick Guide :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html"><strong>AgensGraph Quick Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#release-notes"><strong>Release Notes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#overview"><strong>Overview</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#installation"><strong>Installation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#data-model"><strong>Data Model</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#agensgraph-query"><strong>AgensGraph Query</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#graph-data-import"><strong>Graph Data Import</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#tools"><strong>Tools</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#client-drivers"><strong>Client Drivers</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Manual :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html"><strong>AgensGraph Developer Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#introduction"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#get-started"><strong>Get Started</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#cypher-query-language"><strong>Cypher Query Language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#sql-language"><strong>SQL Language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#hybrid-query-language"><strong>Hybrid Query Language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#drivers"><strong>Drivers</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#procedural-language"><strong>Procedural language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#appendix"><strong>Appendix</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#agenshub-developer-manual"><strong>AgensHub Developer Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#agenspop-developer-manual"><strong>AgensPop Developer Manual</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Operations Manual :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html"><strong>AgensGraph Operations Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#introduction"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#deployment"><strong>Deployment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#architecture"><strong>Architecture</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#security"><strong>Security</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#backup-recovery"><strong>Backup &amp; Recovery</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#configuration"><strong>Configuration</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#tools"><strong>Tools</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#appendix"><strong>Appendix</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#agenshub-operation-manual"><strong>AgensHub Operation Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#agenspop-operation-manual"><strong>AgensPop Operation Manual</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">AG Viewer Manual :</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>AG Viewer Manual</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction"><strong>1. Introduction</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-ag-viewer"><strong>1.1. Introduction to AG Viewer</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-requirement"><strong>1.2. System Requirement</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation"><strong>2. Installation</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#environment-setting"><strong>2.1. Environment Setting</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-and-startup"><strong>2.2. Installation and Startup</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setup-and-start-using-command"><strong>2.2.1. Setup and start using command</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-up-and-start-using-docker"><strong>2.2.2. Set up and start using docker</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#screen-layout"><strong>3. Screen Layout</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#initial-screen"><strong>3.1 Initial Screen</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#main-frame"><strong>3.2. Main Frame</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph-frame"><strong>3.2.1. Graph Frame</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frame-format"><strong>3.2.2. Frame format</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#menubar"><strong>Menubar</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AgensGraph Guide & Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><strong>AG Viewer Manual</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/AG Viewer Manual v1.0/AG Viewer Manual.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ag-viewer-manual">
+<h1><strong>AG Viewer Manual</strong><a class="headerlink" href="#ag-viewer-manual" title="Permalink to this heading"></a></h1>
+<p><strong>Copyright Notice</strong></p>
+<p><strong>Copyright © 2016-2021, Bitnine Inc. All Rights Reserved.</strong></p>
+<p>Restricted Rights Legend</p>
+<p>PostgreSQL is Copyright © 1996-2021 by the PostgreSQL Global Development Group.</p>
+<p>Postgres95 is Copyright © 1994-5 by the Regents of the University of California.</p>
+<p>AgensGraph is Copyright © 2016-2021 by Bitnine Inc.</p>
+<p>Permission to use, copy, modify, and distribute this software and its documentation for any purpose, without fee, and without a written agreement is hereby granted, provided that the above copyright notice and this paragraph and the following two paragraphs appear in all copies.</p>
+<p>IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<p>THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN ”AS-IS” BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.</p>
+<p><strong>Trademarks</strong></p>
+<p>AgensGraph® is a registered trademark of Bitnine Global Inc. Other products, titles or services may be registered trademarks of their respective companies.</p>
+<p><strong>Open Source Software Notice</strong></p>
+<p>Some modules or files of this product are subject to the terms of the following licenses. : OpenSSL, RSA Data Security, Inc., Apache Foundation, Jean-loup Gailly and Mark Adler, Paul Hsieh’s hash.</p>
+<p><strong>Information of technical documentation</strong></p>
+<p>Title : AgensGraph Operations Manual</p>
+<p>Published date : 08 11, 2021</p>
+<p>S/W version : AG Viewer Manual</p>
+<p>Technical documentation version : v1.0</p>
+<section id="introduction">
+<h2><strong>1. Introduction</strong><a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<section id="introduction-to-ag-viewer">
+<h3><strong>1.1. Introduction to AG Viewer</strong><a class="headerlink" href="#introduction-to-ag-viewer" title="Permalink to this heading"></a></h3>
+<p>AG Viewer is a user interface that provides visualization of data loaded in AgensGraph through a web browser.</p>
+</section>
+<section id="system-requirement">
+<h3><strong>1.2. System Requirement</strong><a class="headerlink" href="#system-requirement" title="Permalink to this heading"></a></h3>
+<p>Browsers that support ES6, such as Chrome, Edge, Safari, Firefox, etc.</p>
+</section>
+</section>
+<section id="installation">
+<h2><strong>2. Installation</strong><a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<section id="environment-setting">
+<h3><strong>2.1. Environment Setting</strong><a class="headerlink" href="#environment-setting" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Node.JS (Version 14.x.x or higher)</p></li>
+<li><p>NPM (Version 6.x.x or higher)</p></li>
+<li><p>Required Package</p>
+<ul>
+<li><p>pegjs, express, npm-run-all
+(command: npm -g install pegjs, express, npm-run-all)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="installation-and-startup">
+<h3><strong>2.2. Installation and Startup</strong><a class="headerlink" href="#installation-and-startup" title="Permalink to this heading"></a></h3>
+<section id="setup-and-start-using-command">
+<h4><strong>2.2.1. Setup and start using command</strong><a class="headerlink" href="#setup-and-start-using-command" title="Permalink to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  $npm run setup
+  $npm run start
+</pre></div>
+</div>
+</section>
+<section id="set-up-and-start-using-docker">
+<h4><strong>2.2.2. Set up and start using docker</strong><a class="headerlink" href="#set-up-and-start-using-docker" title="Permalink to this heading"></a></h4>
+<ol class="simple">
+<li><p>Install docker in advance <a class="reference external" href="https://www.docker.com/get-started">https://www.docker.com/get-started</a>, install the version compatible with your OS from the provided link.</p></li>
+<li><p>Run the command below</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$docker run -d \
+  --publish=3001:3001 \
+  --name=agviewer \
+  bitnine/agviewer:latest
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Once installation is completed via docker, run the container.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  $docker ps -a
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="screen-layout">
+<h2><strong>3. Screen Layout</strong><a class="headerlink" href="#screen-layout" title="Permalink to this heading"></a></h2>
+<section id="initial-screen">
+<h3><strong>3.1 Initial Screen</strong><a class="headerlink" href="#initial-screen" title="Permalink to this heading"></a></h3>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.001.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.001.png" /> In the initial screen, a server connect frame for connecting to the database appears.</p>
+<ul class="simple">
+<li><p>Components of Server Connect Frame</p>
+<ul>
+<li><p>connect url</p></li>
+<li><p>connect port</p></li>
+<li><p>database name</p></li>
+<li><p>graph path</p></li>
+<li><p>username</p></li>
+<li><p>password</p></li>
+</ul>
+</li>
+<li><p>When the database is connected, an alert indicating the success of the database connection to the server status frame is displayed.</p></li>
+</ul>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.002.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.002.png" /></p>
+<ul class="simple">
+<li><p>If the database connection fails, a connection failure alert appears.</p></li>
+</ul>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.003.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.003.png" /></p>
+</section>
+<section id="main-frame">
+<h3><strong>3.2. Main Frame</strong><a class="headerlink" href="#main-frame" title="Permalink to this heading"></a></h3>
+<section id="graph-frame">
+<h4><strong>3.2.1. Graph Frame</strong><a class="headerlink" href="#graph-frame" title="Permalink to this heading"></a></h4>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.004.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.004.png" /></p>
+<p>The graph frame visually shows the searched data. The screen is largely divided into a query editor and a frame.</p>
+<ul class="simple">
+<li><p>Query Editor</p></li>
+</ul>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.005.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.005.png" /></p>
+<p>Query Editor is a text box for entering cypher queries or special commands. Special commands are in the format of ‘:(colon) command’, and the special commands currently supported by AG Viewer are as follows: - :play northwind : A tutorial showing how to create and inquire data through a northwind dataset. - :server connect : Create a frame to connect to a database server. If it is already connected to the database, an alert indicating that it has already been connected is displayed. - :server status : Create a frame indicating the database connection status. If not connected to the database, a guide to connecting to the database is provided. - :server disconnect : Disconnect the database connection. After disconnecting the database, an alert indicating that the connection has been disconnected is displayed.</p>
+<ul class="simple">
+<li><p>Run Query</p></li>
+</ul>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.006.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.006.png" /></p>
+<p>This button runs a cypher query or special commands.</p>
+<ul class="simple">
+<li><p>Resizing Editor</p></li>
+</ul>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.007.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.007.png" /></p>
+<p>Resize the window by dragging the edge of the Query Editor.</p>
+<ul class="simple">
+<li><p>History</p></li>
+</ul>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.008.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.008.png" /> Enter CTRL + ↑ or CTRL + ↓ to reload a previously viewed query.</p>
+<ul class="simple">
+<li><p>Frame</p></li>
+</ul>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.009.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.009.png" /> The frame is a space where the result of the query entered in the Query Editor is shown. The frame format is provided in the form of a graph and table. The default format is graph.</p>
+<p>The components of the graph frame are as follows:</p>
+<ul class="simple">
+<li><p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.010.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.010.png" /> :Filter: specify the node that needs highlight in the query result.</p></li>
+<li><p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.011.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.011.png" /> :Remove Filter: Removes the applied filter condition.</p></li>
+<li><p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.012.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.012.png" /> :Maximize Frame: Maximize the size of the frame.</p></li>
+<li><p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.013.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.013.png" /> :Resize Frame: Returns the maximized frame to its original size.</p></li>
+<li><p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.014.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.014.png" /> :Refresh Frame: Reload the frame to its initial inquiry state</p></li>
+<li><p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.015.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.015.png" /> :Fold Frame: Minimize the frame.</p></li>
+<li><p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.016.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.016.png" /> : Open Frame: Returns the minimized frame to its original size.</p></li>
+<li><p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.017.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.017.png" /> : Close Frame: Close the frame.</p></li>
+</ul>
+</section>
+<section id="frame-format">
+<h4><strong>3.2.2. Frame format</strong><a class="headerlink" href="#frame-format" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Graph frame format type</p></li>
+</ul>
+<p>There are a total of two formats that show the data. The default format is shown in graph.
+<img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.018.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.018.png" /></p>
+<ul class="simple">
+<li><p>Components of Graph Format
+<img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.019.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.019.png" /></p></li>
+</ul>
+<p>①<strong>Node list, vertex selector</strong>: This is a list of set properties representing nodes displayed as a result of the query and is represented by the label name of the node. When each property is selected, all nodes corresponding to the label are selected, and color, size, and caption can be edited in ⑦.</p>
+<p>②<strong>Edge list, edge selector</strong>: This is a list of set properties representing edges displayed as a result of the query and is represented by the label name of the edge. When each property is selected, all edges corresponding to the label are selected, and the color, size, and caption can be edited in ⑦.</p>
+<p>③<strong>Selecting frame format</strong>: Select either graph or table format to view the current frame.</p>
+<p>④<strong>Graph frame</strong>:A screen that displays data in node and edge as a result of the query. When clicking each node, a unique ID of the selected node and property information of the node is displayed in ⑤Likewise, when clicking an edge, a unique ID and property information of the selected edge is displayed.</p>
+<p>⑤<strong>Information display window</strong>: Summarizes the query result shown on the frame. The result shows the number of nodes and edges, including the information of the selected property in the frame.</p>
+<p>⑥<strong>Graph frame layout setting</strong>: Change the layout of the frame. The layout arrangement of node/edge can be changed. A total of 12 layouts are provided, and cose-bilkent is used as a default. The layout types are as follows: - random - grid - breadth-first - concentric - cola - cose - cose-blikent - dagre - klay - euler - avsdf - spread</p>
+<p>⑦<strong>Change graph frame chart property</strong>: Edit and change the selected property, and features are as follows:
+- Change chart properties of node/edge - Change color, size, caption - A caption is a property and cannot be used more than 2 - Chart properties changed in the frame do not affect other frames</p>
+<ul class="simple">
+<li><p><strong>Handling graph frame</strong></p>
+<ul>
+<li><p>Screen in ④ can be moved by dragging an empty space with a mouse.</p></li>
+<li><p>When selecting and right-clicking a node, 4 additional menus appear. The details of the features are as follows:</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.020.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.020.png" /></p>
+<blockquote>
+<div><p>- ① Fixed/Return node: Relocates the node to the position at the time of initial inquiry </br>
+- ② Close menu: Closes the opened menu </br>
+- ③ Expand node: If there is a node connected by an edge to the corresponding node, add the adjacent node and edge to the graph frame. </br>
+- ④ Hide node: Remove a node from the graph frame. (Actual data is not deleted) If there is a node connected by another node with an edge, only the edge is removed. </br></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Multi-selecting nodes <img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.021.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.021.png" /> When double-clicking a node, multiple adjacent nodes connected to the edge of the corresponding nodes are selected. When a node double-click is repeated, it is possible to additionally select nodes linked to more edges through the edge relationship. All selected nodes can be dragged with a mouse.</p></li>
+<li><p>Table format <img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.022.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.022.png" /></p>
+<ul>
+<li><p>① Header: Header of the executed query result. Alias name specified as Alias in the query is displayed as a header.</p></li>
+<li><p>② Result: Executed query results are displayed.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="menubar">
+<h3><strong>Menubar</strong><a class="headerlink" href="#menubar" title="Permalink to this heading"></a></h3>
+<p>Database Information and Configure can be selected on this screen.</p>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.023.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.023.png" /> - Node Label , Edge Label , Properties Label</p>
+<p>When the database is successfully connected, the summary information of the node, edge, and properties within the database will be displayed as buttons on the menu bar. Clicking the button will automatically enter the query in the Query Editor, and the formats in which the query is created are as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">node</span> <span class="n">label</span><span class="p">:</span> <span class="n">MATCH</span> <span class="p">(</span><span class="n">V</span><span class="p">)</span> <span class="n">WHERE</span> <span class="n">LABEL</span><span class="p">(</span><span class="n">V</span><span class="p">)</span> <span class="o">=</span> <span class="n">label</span> <span class="n">name</span> <span class="n">RETURN</span> <span class="n">V</span>
+<span class="o">-</span> <span class="n">edge</span> <span class="n">label</span><span class="p">:</span> <span class="n">MATCH</span> <span class="p">(</span><span class="n">V</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="n">R</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">V2</span><span class="p">)</span> <span class="n">WHERE</span> <span class="n">LABEL</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="o">=</span> <span class="n">label</span> <span class="n">name</span> <span class="n">RETURN</span> <span class="n">V</span>
+<span class="o">-</span> <span class="n">node</span> <span class="nb">property</span><span class="p">:</span> <span class="n">MATCH</span> <span class="p">(</span><span class="n">V</span><span class="p">)</span> <span class="n">WHERE</span> <span class="n">V</span><span class="o">.</span><span class="n">PROPERTY</span> <span class="n">IS</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">RETURN</span> <span class="n">V</span><span class="o">&lt;/</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="o">-</span> <span class="n">edge</span> <span class="nb">property</span><span class="p">:</span> <span class="n">MATCH</span> <span class="p">(</span><span class="n">V</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="n">R</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">V2</span><span class="p">)</span> <span class="n">WHERE</span> <span class="n">R</span><span class="o">.</span><span class="n">PROPERTY</span> <span class="n">IS</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">RETURN</span> <span class="n">V</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Description of Buttons and Features</p>
+<p>① Show/Hide Menubar: A toggle button to hide or show the menu bar.</p>
+<p>② Refresh: Refresh information of nodes, edges, and properties.</p>
+<p>③ Close Session: Close currently connected DB session.</p>
+</li>
+<li><p><strong>Node Label</strong></p>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.024.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.024.png" /></p>
+</li>
+</ul>
+<p>Above is a list of all the nodes that exist in the graph of the currently connected DB. The number in the parentheses “()” shows the number of nodes. Item marked with “*” refers to all nodes.</p>
+<ul>
+<li><p><strong>Edge Label</strong></p>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.025.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.025.png" /></p>
+</li>
+</ul>
+<p>Above is a list of all the edges that exist in the graph of the currently connected DB. The number in the parentheses “()” shows the number of edges. Item marked with “*” refers to all edges.
+Unlike a node with a round box, an edge is shown in a rectangular box.</p>
+<ul>
+<li><p>**Properties</p>
+<p><img alt="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.026.png" src="../_images/Aspose.Words.51436631-f3ad-45df-bd7d-80c9f08a2d65.026.png" /></p>
+</li>
+</ul>
+<p>Above is a list of all the properties that exist in the graph of the currently connected DB. Property is shown in a grey rectangular box.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html" class="btn btn-neutral float-left" title="AgensGraph Operations Manual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Bitnine Global.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
