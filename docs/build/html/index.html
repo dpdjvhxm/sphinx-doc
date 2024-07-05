@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgensGraph Guide &amp; Manual &mdash; AgensGraph Guide &amp; Manual 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="AgensGraph Quick Guide" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> AgensGraph Guide & Manual
+            <img src="_static/bitnine_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick Guide :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html"><strong>AgensGraph Quick Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#release-notes"><strong>Release Notes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#overview"><strong>Overview</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#installation"><strong>Installation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#data-model"><strong>Data Model</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#agensgraph-query"><strong>AgensGraph Query</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#graph-data-import"><strong>Graph Data Import</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#tools"><strong>Tools</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#client-drivers"><strong>Client Drivers</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Manual :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html"><strong>AgensGraph Developer Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#introduction"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#get-started"><strong>Get Started</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#cypher-query-language"><strong>Cypher Query Language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#sql-language"><strong>SQL Language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#hybrid-query-language"><strong>Hybrid Query Language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#drivers"><strong>Drivers</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#procedural-language"><strong>Procedural language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#appendix"><strong>Appendix</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#agenshub-developer-manual"><strong>AgensHub Developer Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#agenspop-developer-manual"><strong>AgensPop Developer Manual</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Operations Manual :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html"><strong>AgensGraph Operations Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#introduction"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#deployment"><strong>Deployment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#architecture"><strong>Architecture</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#security"><strong>Security</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#backup-recovery"><strong>Backup &amp; Recovery</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#configuration"><strong>Configuration</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#tools"><strong>Tools</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#appendix"><strong>Appendix</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#agenshub-operation-manual"><strong>AgensHub Operation Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#agenspop-operation-manual"><strong>AgensPop Operation Manual</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">AG Viewer Manual :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AG%20Viewer%20Manual%20v1.0/AG%20Viewer%20Manual.html"><strong>AG Viewer Manual</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">AgensGraph Guide & Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>AgensGraph Guide &amp; Manual</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="agensgraph-guide-manual">
+<h1>AgensGraph Guide &amp; Manual<a class="headerlink" href="#agensgraph-guide-manual" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Quick Guide :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html"><strong>AgensGraph Quick Guide</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#copyright-notice"><strong>Copyright Notice</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#release-notes"><strong>Release Notes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#overview"><strong>Overview</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#basic-information"><strong>Basic information</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#agensgraph-introduction"><strong>AgensGraph Introduction</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#features"><strong>Features</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#installation"><strong>Installation</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#installation-of-pre-built-packages"><strong>Installation of pre-built packages</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#installation-of-build-source-code"><strong>Installation of build source code</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#post-installation-setup-and-configuration"><strong>Post-Installation Setup and Configuration</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#configuring-server-parameters"><strong>Configuring Server Parameters</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#data-model"><strong>Data Model</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#agensgraph-data-model"><strong>AgensGraph Data Model</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#data-definition-language"><strong>Data Definition Language</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#agensgraph-query"><strong>AgensGraph Query</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#graph-query"><strong>Graph Query</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#hybrid-query"><strong>Hybrid Query</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#graph-data-import"><strong>Graph Data Import</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#indexes-with-data-import"><strong>Indexes with Data Import</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#tools"><strong>Tools</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#command-line-interface-tool"><strong>Command Line Interface Tool</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#client-drivers"><strong>Client Drivers</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html#java-driver"><strong>Java Driver</strong></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Developer Manual :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html"><strong>AgensGraph Developer Manual</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#copyright-notice"><strong>Copyright Notice</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#introduction"><strong>Introduction</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#agensgraph-highlights"><strong>AgensGraph Highlights</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#graph-database-concepts"><strong>Graph Database Concepts</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#get-started"><strong>Get Started</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#install-agensgraph"><strong>Install AgensGraph</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#get-started-with-cypher"><strong>Get started with Cypher</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#cypher-query-language"><strong>Cypher Query Language</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#id1"><strong>Introduction</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#data-type"><strong>Data Type</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#clauses"><strong>Clauses</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#functions"><strong>functions</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#sql-language"><strong>SQL Language</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#id3"><strong>Introduction</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#id4"><strong>Data Type</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#id6"><strong>functions</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#hybrid-query-language"><strong>Hybrid Query Language</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#id8"><strong>Introduction</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#syntax"><strong>Syntax</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#drivers"><strong>Drivers</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#id9"><strong>Introduction</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#usage-of-the-java-driver"><strong>Usage of the Java Driver</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#usage-of-the-python-driver"><strong>Usage of the Python Driver</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#usage-of-the-node-js-driver"><strong>Usage of the Node.js Driver</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#procedural-language"><strong>Procedural language</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#id16"><strong>Procedural language</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#pl-pgsql"><strong>PL/pgSQL</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#pl-python"><strong>PL/Python</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#appendix"><strong>Appendix</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#agensgraph-error-codes"><strong>AgensGraph Error Codes</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#terminology"><strong>Terminology</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#faq"><strong>FAQ</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#agenshub-developer-manual"><strong>AgensHub Developer Manual</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#install-and-operate-agenshub"><strong>Install and Operate AgensHub</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#agenspop-developer-manual"><strong>AgensPop Developer Manual</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#installing-and-operating-the-program"><strong>Installing and Operating the Program</strong></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Operations Manual :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html"><strong>AgensGraph Operations Manual</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#trademarks"><strong>Trademarks</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#open-source-software-notice"><strong>Open Source Software Notice</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#introduction"><strong>Introduction</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#what-is-agensgraph"><strong>What is AgensGraph?</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#deployment"><strong>Deployment</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#system-requirements"><strong>System Requirements</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#pre-install-tasks"><strong>Pre-install tasks</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#single-instance-install"><strong>Single instance install</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#operations"><strong>Operations</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#architecture"><strong>Architecture</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#process-structure"><strong>Process structure</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#security"><strong>Security</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#client-authentication"><strong>Client Authentication</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#role"><strong>Role</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#backup-recovery"><strong>Backup &amp; Recovery</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#backup"><strong>Backup</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#recovery"><strong>Recovery</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#configuration"><strong>Configuration</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#configuration-settings-reference"><strong>Configuration Settings Reference</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#file-locations"><strong>File Locations</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#resource-consumption"><strong>Resource Consumption</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#write-ahead-log"><strong>Write Ahead Log</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#query-planning"><strong>Query Planning</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#error-reporting-and-logging"><strong>Error Reporting and Logging</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#version-and-platform-compatibility"><strong>Version and Platform Compatibility</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#tools"><strong>Tools</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#client-tool"><strong>Client Tool</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#server-tool"><strong>Server Tool</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#appendix"><strong>Appendix</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#system-catalogs"><strong>System Catalogs</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#system-views"><strong>System Views</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#agenshub-operation-manual"><strong>AgensHub Operation Manual</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#connection"><strong>Connection</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#schema"><strong>Schema</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#model"><strong>Model</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#flow-type"><strong>Flow Type</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#workflow"><strong>Workflow</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#agenspop-operation-manual"><strong>AgensPop Operation Manual</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#basic-screen"><strong>Basic Screen</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#importing-data"><strong>Importing Data</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#querying-data"><strong>Querying Data</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#canvas-mode"><strong>Canvas Mode</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#graph-contraction"><strong>Graph Contraction</strong></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">AG Viewer Manual :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AG%20Viewer%20Manual%20v1.0/AG%20Viewer%20Manual.html"><strong>AG Viewer Manual</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AG%20Viewer%20Manual%20v1.0/AG%20Viewer%20Manual.html#introduction"><strong>1. Introduction</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AG%20Viewer%20Manual%20v1.0/AG%20Viewer%20Manual.html#installation"><strong>2. Installation</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AG%20Viewer%20Manual%20v1.0/AG%20Viewer%20Manual.html#screen-layout"><strong>3. Screen Layout</strong></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="AgensGraph%20Quick%20Guide%20v2.14.0/AgensGraph%20Quick%20Guide%20v2.14.0.html" class="btn btn-neutral float-right" title="AgensGraph Quick Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Bitnine Global.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

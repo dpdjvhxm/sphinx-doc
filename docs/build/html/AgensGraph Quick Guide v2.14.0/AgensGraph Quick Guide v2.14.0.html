@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgensGraph Quick Guide &mdash; AgensGraph Guide &amp; Manual 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AgensGraph Developer Manual" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html" />
+    <link rel="prev" title="AgensGraph Guide &amp; Manual" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> AgensGraph Guide & Manual
+            <img src="../_static/bitnine_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick Guide :</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>AgensGraph Quick Guide</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#copyright-notice"><strong>Copyright Notice</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#release-notes"><strong>Release Notes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#overview"><strong>Overview</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-information"><strong>Basic information</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agensgraph-introduction"><strong>AgensGraph Introduction</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-agensgraph"><strong>What is AgensGraph?</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#features"><strong>Features</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#more-information"><strong>More Information</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#installation"><strong>Installation</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-of-pre-built-packages"><strong>Installation of pre-built packages</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-agensgraph-on-linux"><strong>Installing AgensGraph on Linux</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-of-build-source-code"><strong>Installation of build source code</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#post-installation-setup-and-configuration"><strong>Post-Installation Setup and Configuration</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuring-server-parameters"><strong>Configuring Server Parameters</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#data-model"><strong>Data Model</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#agensgraph-data-model"><strong>AgensGraph Data Model</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#property-graph-model"><strong>Property Graph Model</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-objects-in-agensgraph"><strong>Data Objects in AgensGraph</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#labels"><strong>Labels</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-definition-language"><strong>Data Definition Language</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quick-description"><strong>Quick Description</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph"><strong>Graph</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1"><strong>Labels</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-description"><strong>Detailed Description</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2"><strong>GRAPH</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#label"><strong>LABEL</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#property-index"><strong>Property Index</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#constraints"><strong>Constraints</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#agensgraph-query"><strong>AgensGraph Query</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#graph-query"><strong>Graph Query</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction"><strong>Introduction</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-an-example-graph"><strong>Creating an Example Graph</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-the-labels"><strong>Creating the Labels</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-the-vertices-and-edges"><strong>Creating the Vertices and Edges</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#querying-the-graph"><strong>Querying the Graph</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manipulating-the-graph"><strong>Manipulating the Graph</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#merge"><strong>MERGE</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finding-the-shortest-path"><strong>Finding the Shortest Path</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finding-the-edge-head-tail-last"><strong>Finding the Edge (Head, Tail, Last)</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hybrid-query"><strong>Hybrid Query</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3"><strong>Introduction</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cypher-in-sql"><strong>Cypher in SQL</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sql-in-cypher"><strong>SQL in Cypher</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#graph-data-import"><strong>Graph Data Import</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#indexes-with-data-import"><strong>Indexes with Data Import</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#tools"><strong>Tools</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-interface-tool"><strong>Command Line Interface Tool</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#meta-command"><strong>Meta Command</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#client-drivers"><strong>Client Drivers</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#java-driver"><strong>Java Driver</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4"><strong>Introduction</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage-of-the-java-driver"><strong>Usage of the Java Driver</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#get-the-driver"><strong>Get the Driver</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connection"><strong>Connection</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#retrieving-data"><strong>Retrieving Data</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-data"><strong>Creating Data</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Manual :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html"><strong>AgensGraph Developer Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#introduction"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#get-started"><strong>Get Started</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#cypher-query-language"><strong>Cypher Query Language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#sql-language"><strong>SQL Language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#hybrid-query-language"><strong>Hybrid Query Language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#drivers"><strong>Drivers</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#procedural-language"><strong>Procedural language</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#appendix"><strong>Appendix</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#agenshub-developer-manual"><strong>AgensHub Developer Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html#agenspop-developer-manual"><strong>AgensPop Developer Manual</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Operations Manual :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html"><strong>AgensGraph Operations Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#introduction"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#deployment"><strong>Deployment</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#architecture"><strong>Architecture</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#security"><strong>Security</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#backup-recovery"><strong>Backup &amp; Recovery</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#configuration"><strong>Configuration</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#tools"><strong>Tools</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#appendix"><strong>Appendix</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#agenshub-operation-manual"><strong>AgensHub Operation Manual</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AgensGraph%20Operations%20Manual%20v2.14.0/AgensGraph%20Operations%20Manual%20v2.14.0.html#agenspop-operation-manual"><strong>AgensPop Operation Manual</strong></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">AG Viewer Manual :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../AG%20Viewer%20Manual%20v1.0/AG%20Viewer%20Manual.html"><strong>AG Viewer Manual</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AgensGraph Guide & Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><strong>AgensGraph Quick Guide</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/AgensGraph Quick Guide v2.14.0/AgensGraph Quick Guide v2.14.0.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="agensgraph-quick-guide">
+<h1><strong>AgensGraph Quick Guide</strong><a class="headerlink" href="#agensgraph-quick-guide" title="Permalink to this heading"></a></h1>
+<section id="copyright-notice">
+<h2><strong>Copyright Notice</strong><a class="headerlink" href="#copyright-notice" title="Permalink to this heading"></a></h2>
+<p>Copyright © 2016-2024, Bitnine Inc. All Rights Reserved.</p>
+<p>Restricted Rights Legend</p>
+<p>PostgreSQL is Copyright © 1996-2024 by the PostgreSQL Global Development Group.</p>
+<p>Postgres95 is Copyright © 1994-5 by the Regents of the University of California.</p>
+<p>AgensGraph is Copyright © 2016-2024 by Bitnine Inc.</p>
+<p>Permission to use, copy, modify, and distribute this software and its documentation for any purpose, without fee, and without a written agreement is hereby granted, provided that the above copyright notice and this paragraph and the following two paragraphs appear in all copies.</p>
+<p>IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<p>THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN ”AS-IS” BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.</p>
+<p><strong>Trademarks</strong></p>
+<p>AgensGraph® is a registered trademark of Bitnine Global Inc. Other products, titles or services may be registered</p>
+<p><strong>Open Source Software Notice</strong></p>
+<p>Some modules or files of this product are subject to the terms of the following licenses. : OpenSSL, RSA Data Security, Inc., Apache Foundation, Jean-loup Gailly and Mark Adler, Paul Hsieh’s hash.</p>
+<p><strong>Information of technical documentation</strong></p>
+<p>Title : AgensGraph Quick Guide</p>
+<p>Published date : 11 10, 2022</p>
+<p>S/W version : AgensGraph v2.14.0</p>
+<p>Technical documentation version : v1.0</p>
+</section>
+</section>
+<section id="release-notes">
+<h1><strong>Release Notes</strong><a class="headerlink" href="#release-notes" title="Permalink to this heading"></a></h1>
+<p>This document is for AgensGraph v2.14 community edition. See the release <a class="reference external" href="https://github.com/bitnine-oss/agensgraph/releases">link</a>.</p>
+</section>
+<section id="overview">
+<h1><strong>Overview</strong><a class="headerlink" href="#overview" title="Permalink to this heading"></a></h1>
+<section id="basic-information">
+<h2><strong>Basic information</strong><a class="headerlink" href="#basic-information" title="Permalink to this heading"></a></h2>
+<p><strong>About the Documentation</strong></p>
+<p>This document is a short guide for AgensGraph developers. This guide will introduce various aspects of AgensGraph, including the data model and data definition language, Cypher query processing abilities, and Java development capabilities. Because AgensGraph is compatible with PostgreSQL, some parts of the documentation quote parts of PostgreSQL’s documentation or link to it.</p>
+<p><strong>License</strong></p>
+<p>Creative Commons 3.0 License (<a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">https://creativecommons.org/licenses/by-sa/3.0/</a>)</p>
+</section>
+<section id="agensgraph-introduction">
+<h2><strong>AgensGraph Introduction</strong><a class="headerlink" href="#agensgraph-introduction" title="Permalink to this heading"></a></h2>
+<section id="what-is-agensgraph">
+<h3><strong>What is AgensGraph?</strong><a class="headerlink" href="#what-is-agensgraph" title="Permalink to this heading"></a></h3>
+<p>AgensGraph is a new generation multi-model graph database for the modern complex data environment. AgensGraph is a multi-model database based on PostgreSQL RDBMS, and supports both relational and graph data models at the same time. This enables developers to integrate the legacy relational data model and the flexible graph data model in one database. AgensGraph supports Ansi-SQL and Open Cypher (<a class="reference external" href="http://www.opencypher.org/">http://www.opencypher.org</a>). SQL queries and Cypher queries can be integrated into a single query in AgensGraph.</p>
+<p>AgensGraph is very robust, fully-featured and ready for enterprise use. It is optimized for handling complex connected graph data and provides plenty of powerful database features essential to the enterprise database environment including ACID transactions, multi-version concurrency control, stored procedure, triggers, constraints, sophisticated monitoring and a flexible data model (JSON). Moreover, AgensGraph leverages the rich eco-systems of PostgreSQL and can be extended with many outstanding external modules, like PostGIS.</p>
+</section>
+</section>
+<section id="features">
+<h2><strong>Features</strong><a class="headerlink" href="#features" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Multi-model support of the property graph data model, relational data model and JSON documents</p></li>
+<li><p>Cypher query language support</p></li>
+<li><p>Integrated querying using SQL and Cypher</p></li>
+<li><p>Graph data object management</p></li>
+<li><p>Hierarchical graph label organization</p></li>
+<li><p>Property indexes on both vertexes and edges</p></li>
+<li><p>Constraints: unique, mandatory and check constraints</p></li>
+<li><p>ACID transactions</p></li>
+<li><p>Hadoop connectivity</p></li>
+<li><p>Active-standby replication</p></li>
+<li><p>And many other features</p></li>
+</ul>
+<section id="more-information">
+<h3><strong>More Information</strong><a class="headerlink" href="#more-information" title="Permalink to this heading"></a></h3>
+<p>Because AgensGraph inherits all features of PostgreSQL (<a class="reference external" href="http://postgresql.org/">http://postgresql.org</a>), users and database administrators can refer to <a class="reference external" href="https://www.postgresql.org/docs/current/static/index.html">the documentation of PostgreSQL</a> for more information.</p>
+</section>
+</section>
+</section>
+<section id="installation">
+<h1><strong>Installation</strong><a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+<p>AgensGraph runs on Linux and Windows. There are two methods available to install AgensGraph: downloading the binary package or compiling the package from source code.</p>
+<section id="installation-of-pre-built-packages">
+<h2><strong>Installation of pre-built packages</strong><a class="headerlink" href="#installation-of-pre-built-packages" title="Permalink to this heading"></a></h2>
+<section id="installing-agensgraph-on-linux">
+<h3><strong>Installing AgensGraph on Linux</strong><a class="headerlink" href="#installing-agensgraph-on-linux" title="Permalink to this heading"></a></h3>
+<ol class="simple">
+<li><p>Get the pre-compiled binary:
+Visit the AgensGraph <a class="reference external" href="https://bitnine.net/downloads/">download page</a> and download the corresponding version of AgensGraph.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">Tip</span><span class="p">:</span> <span class="n">If</span> <span class="n">you</span> <span class="n">do</span> <span class="ow">not</span> <span class="n">know</span> <span class="n">your</span> <span class="n">system</span> <span class="n">environment</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">use</span> <span class="n">the</span> <span class="n">command</span><span class="p">:</span>
+<span class="n">uname</span> <span class="o">-</span><span class="n">sm</span><span class="o">*</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Extract the package:
+Extract the downloaded file into a directory for your use (for example, /usr/local/AgensGraph/ on Linux)
+tar xvf <em>/path/to/your/use</em></p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>*Note : If you want AgensGraph on other operating systems, please contact Bitnine’s support team.*
+</pre></div>
+</div>
+</section>
+</section>
+<section id="installation-of-build-source-code">
+<h2><strong>Installation of build source code</strong><a class="headerlink" href="#installation-of-build-source-code" title="Permalink to this heading"></a></h2>
+<ol class="simple">
+<li><p>Access the AgensGraph<a class="reference external" href="https://github.com/bitnine-oss/agensgraph">github</a> and get the source code.
+$ git clone <a class="reference external" href="https://github.com/bitnine-oss/agensgraph.git">https://github.com/bitnine-oss/agensgraph.git</a></p></li>
+<li><p>Install the following essential libraries according to each OS.</p>
+<ol class="simple">
+<li><p>CENTOS
+$ yum install gcc glibc glib-common readline readline-devel zlib zlib-devel flex bison</p></li>
+<li><p>Fedora
+$ dnf install gcc glibc bison flex readline readline-devel zlib zlib-devel</p></li>
+<li><p>Ubuntu
+$ sudo apt-get install build-essential libreadline-dev zlib1g-dev flex bison</p></li>
+</ol>
+</li>
+<li><p>Go to the clone location and run configure on the source tree. The –prefix=/path/to/intall option allows you to set the location where AgensGraph will be installed.
+$ ./configure</p></li>
+<li><p>Run the build.
+$ make install</p></li>
+<li><p>Install the extension module and binary
+$ make install-world</p></li>
+</ol>
+</section>
+<section id="post-installation-setup-and-configuration">
+<h2><strong>Post-Installation Setup and Configuration</strong><a class="headerlink" href="#post-installation-setup-and-configuration" title="Permalink to this heading"></a></h2>
+<ol>
+<li><p>Environment variable setting (optional):
+You can add these commands into a shell start-up file, such as the <code class="docutils literal notranslate"><span class="pre">~/.bash\_profile</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>*export LD\_LIBRARY\_PATH=/usr/local/AgensGraph/lib:$LD\_LIBRARY\_PATH
+export PATH=/usr/local/AgensGraph/bin:$PATH
+export AGDATA=/path/to/make/db\_cluster*
+</pre></div>
+</div>
+</li>
+<li><p>Creating a database cluster*:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">initdb</span> <span class="p">[</span><span class="o">-</span><span class="n">D</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">make</span><span class="o">/</span><span class="n">db</span>\<span class="n">_cluster</span><span class="p">]</span><span class="o">*</span>
+</pre></div>
+</div>
+</li>
+<li><p>Starting the server**:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">ag</span>\<span class="n">_ctl</span> <span class="n">start</span> <span class="p">[</span><span class="o">-</span><span class="n">D</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">created</span><span class="o">/</span><span class="n">by</span><span class="o">/</span><span class="n">initdb</span><span class="p">]</span><span class="o">*</span>
+</pre></div>
+</div>
+</li>
+<li><p>Creating a database**:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">createdb</span> <span class="p">[</span><span class="n">dbname</span><span class="p">]</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>If dbname is not specified, a database with the same name as the current user is created, by default.</p>
+</li>
+<li><p>Execute the interactive terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">agens</span> <span class="p">[</span><span class="n">dbname</span><span class="p">]</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>If the db_cluster directory is not specified with <code class="docutils literal notranslate"><span class="pre">-D</span></code> option, the environment variable <code class="docutils literal notranslate"><span class="pre">AGDATA</span></code> is used.</p>
+</li>
+</ol>
+</section>
+<section id="configuring-server-parameters">
+<h2><strong>Configuring Server Parameters</strong><a class="headerlink" href="#configuring-server-parameters" title="Permalink to this heading"></a></h2>
+<p>In order to attain optimal performance, it is very important to set server parameters correctly according to the size of data and machine resources. Among many server parameters, the following parameters are crucial for AgensGraph graph query performance. (You can edit <code class="docutils literal notranslate"><span class="pre">$AGDATA/postgresql.conf</span></code> file to set these parameters (restart required)).</p>
+<ul class="simple">
+<li><p>shared_buffers: The size of memory for caching data objects. This parameter should be increased for the production environment. It is optimal when it is as large as the data size. But, this parameter should be set carefully considering concurrent sessions and memory size allocated for each queries. The recommended setting is half of the physical memory size.</p></li>
+<li><p>work_mem: This shoud be also increased according to the size of physical memory and the properties of queries that will be executed carefully.</p></li>
+<li><p>random_page_cost: This parameter is for query optimization. For graph queries, it is recommended to reduce this value to 1 or 0.005 (in case graph data is fully cached in memory).</p></li>
+</ul>
+<p>For more information, you can refer to <a class="reference external" href="https://www.postgresql.org/docs/current/static/runtime-config-resource.html">PostgreSQL documentation</a>.</p>
+</section>
+</section>
+<section id="data-model">
+<h1><strong>Data Model</strong><a class="headerlink" href="#data-model" title="Permalink to this heading"></a></h1>
+<section id="agensgraph-data-model">
+<h2><strong>AgensGraph Data Model</strong><a class="headerlink" href="#agensgraph-data-model" title="Permalink to this heading"></a></h2>
+<p>AgensGraph is a multi-model database. AgensGraph simultaneously supports both the property graph model and the relational model.</p>
+<section id="property-graph-model">
+<h3><strong>Property Graph Model</strong><a class="headerlink" href="#property-graph-model" title="Permalink to this heading"></a></h3>
+<p><img alt="Labeled Property Graph Model" src="../_images/Aspose.Words.95444035-a573-4fa9-9ed3-ec719a61d205.001.png" /></p>
+<p><em>Labeled Property Graph Model</em></p>
+<p>The property graph model contains connected entities, which can have any number of attributes. In AgensGraph, an entity is known as a vertex. Vertices can have an arbitrary number of attributes and can be categorized with labels. Labels are used to group vertices in order to represent some categories of vertices; i.e. representing the role of a person.</p>
+<p>Edges are directed connections between two vertices. Edges can also have attributes and categorized labels like vertices. In AgensGraph, an edge always has a start vertex and an end vertex. If a query tries to delete a vertex, it must delete all its edges first. Broken edges cannot exist in AgensGraph.</p>
+<p>Properties of edges and vertices are represented in the JSON format. JSON is a text format for the serialization of semi-structured data. JSONs are comprised of six data types: strings, numbers, booleans, null, objects and arrays. AgensGraph objects take full advantage of the JSON format by storing information as unordered collections of zero or more name/value pairs. A name is a string and a value can be any aforementioned type, including nested JSON types. AgensGraph specifically uses the JSONB format. Since JSONB is a decomposed binary format, it is processed much faster than regular JSON, but at the cost of a slightly slower input time.</p>
+</section>
+<section id="data-objects-in-agensgraph">
+<h3><strong>Data Objects in AgensGraph</strong><a class="headerlink" href="#data-objects-in-agensgraph" title="Permalink to this heading"></a></h3>
+<p><img alt="AgensGraph Simple Data model" src="../_images/Aspose.Words.95444035-a573-4fa9-9ed3-ec719a61d205.002.png" /></p>
+<p><em>AgensGraph Simple Data model</em></p>
+<p>In AgensGraph, several databases can be created and each database can contain one or more schemas and graphs. Schemas are for relational tables, and graph objects are for graph data. Schema name and graph name can not be the same. Vertices and edges are grouped into labels. There are two kinds of labels: vertex labels and edge labels. Users can create several graphs in a database but only one graph could be used at one time.</p>
+</section>
+<section id="labels">
+<h3><strong>Labels</strong><a class="headerlink" href="#labels" title="Permalink to this heading"></a></h3>
+<p>Labels are used to group vertices and edges. Users can create property indexes for all vertices under a given label. Labels can be used to provide access controls for different types of users, and label hierarchies can be created to add inheritance to labels. There is default labels for vertices: ag_vertex. If one creates a vertex without specifying its label, then the vertex is stored in the default label. While An edge always has one label.</p>
+<p>We call vertex label and edge label as VLABEL and ELABEL respectively.</p>
+<ul class="simple">
+<li><p>VLABEL : The vertex label. Categorizes vertices to represent their roles.</p>
+<ul>
+<li><p>Vertex : entities which can hold attributes.</p></li>
+</ul>
+</li>
+<li><p>ELABEL : The edge label. Categorizes edges to represent their roles.</p>
+<ul>
+<li><p>Edge : relationships connecting entities.</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="Edge Label inheritance example" src="../_images/Aspose.Words.95444035-a573-4fa9-9ed3-ec719a61d205.003.png" /></p>
+<p><em>Edge Label inheritance example</em></p>
+<p>Every label inherits one or more labels. The figure above shows an example hierarchy of edge labels. The label hierachy is similar to a class hierarchy in object-oriented programming. Each parent label contains child label data. For example, given the above hierarchy, if a query matches with the edge ‘friends’ then, the results contain the data of the ‘roommate’ label.</p>
+</section>
+</section>
+<section id="data-definition-language">
+<h2><strong>Data Definition Language</strong><a class="headerlink" href="#data-definition-language" title="Permalink to this heading"></a></h2>
+<p>This section introduces DDLs for graph objects with a few examples.</p>
+<section id="quick-description">
+<h3><strong>Quick Description</strong><a class="headerlink" href="#quick-description" title="Permalink to this heading"></a></h3>
+<section id="graph">
+<h4><strong>Graph</strong><a class="headerlink" href="#graph" title="Permalink to this heading"></a></h4>
+<p>To create a graph, use the CREATE GRAPH command.</p>
+<p><em><strong>CREATE</strong></em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">GRAPH</span> <span class="n">graphname</span><span class="p">;</span> 
+</pre></div>
+</div>
+<p>Several graphs can be created in a database. In order to specify which graph is to be used, the session parameter <em>graph_path</em> is used.</p>
+<p>To show the current graph path, use the following command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHOW</span> <span class="n">graph</span>\<span class="n">_path</span><span class="p">;</span>       
+</pre></div>
+</div>
+<p>When a graph is created using <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">GRAPH</span></code>, <em>graph_path</em> is set to the created graph if <em>graph_path</em> is not set. You can create multiple graphs and change <em>graph_path</em> to another graph using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET</span> <span class="n">graph</span>\<span class="n">_path</span> <span class="o">=</span> <span class="n">graphname</span><span class="p">;</span>       
+</pre></div>
+</div>
+<p>The <em>graph_path</em> is a session variable, so every client must set the <em>graph_path</em> before querying the graph. Only one graph name can be specified for <em>graph_path</em>. Querying over multiple graphs is not allowed.</p>
+<p>If you set the <em>graph_path</em> for each user or database using the <code class="docutils literal notranslate"><span class="pre">ALTER</span> <span class="pre">ROLE</span></code> or <code class="docutils literal notranslate"><span class="pre">DATABASE</span></code> statement, you do not need to run the <code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">graph\_path</span></code> statement whenever you connect the database.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ALTER</span> <span class="n">ROLE</span> <span class="n">user1</span> <span class="n">IN</span> <span class="n">DATABASE</span> <span class="n">gdb</span> <span class="n">SET</span> <span class="n">graph</span>\<span class="n">_path</span> <span class="n">TO</span> <span class="n">graphname</span><span class="p">;</span>
+
+<span class="n">ALTER</span> <span class="n">DATABASE</span> <span class="n">gdb</span> <span class="n">SET</span> <span class="n">graph</span>\<span class="n">_path</span> <span class="n">TO</span> <span class="n">graphname</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><em><strong>DROP</strong></em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DROP</span> <span class="n">GRAPH</span> <span class="n">graphname</span> <span class="n">CASCADE</span><span class="p">;</span>       
+</pre></div>
+</div>
+<p>A graph has initial labels for vertices and edges. These labels cannot be deleted. To drop the graph, users must do so with the <code class="docutils literal notranslate"><span class="pre">CASCADE</span></code> option. If current <em>graph_path</em> is the deleted graph, then <em>graph_path</em> is reset to null.</p>
+</section>
+<section id="id1">
+<h4><strong>Labels</strong><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p><em><strong>CREATE</strong></em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">VLABEL</span> <span class="n">person</span><span class="p">;</span>
+<span class="n">CREATE</span> <span class="n">VLABEL</span> <span class="n">friend</span> <span class="n">inherits</span> <span class="p">(</span><span class="n">person</span><span class="p">);</span>
+
+<span class="n">CREATE</span> <span class="n">ELABEL</span> <span class="n">knows</span><span class="p">;</span>
+<span class="n">CREATE</span> <span class="n">ELABEL</span> <span class="n">live</span>\<span class="n">_together</span><span class="p">;</span>
+<span class="n">CREATE</span> <span class="n">ELABEL</span> <span class="n">room</span>\<span class="n">_mate</span> <span class="n">inherits</span> <span class="p">(</span><span class="n">knows</span><span class="p">,</span> <span class="n">live</span>\<span class="n">_together</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The keywords VLABEL and ELABEL are used for identifying vertices and edges respectively. CREATE VLABEL will create a vertex label. VLABEL can inherit VLABEL only (in other words, VLABEL cannot inherit ELABEL). <code class="docutils literal notranslate"><span class="pre">inherits</span></code> is an option to inherit a parent label. If not specified, the system sets the initial label as a parent label. Multiple inheritance is possible for creating complex labels.</p>
+<p><em><strong>DROP</strong></em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DROP</span> <span class="n">VLABEL</span> <span class="n">friend</span><span class="p">;</span>
+<span class="n">DROP</span> <span class="n">VLABEL</span> <span class="n">person</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>VLABEL friend inherits person, so VLABEL person cannot be dropped directly. VLABEL friend should be dropped first.</p>
+<p>If a label is bound to any vertex or edge, you cannot delete this label by using DROP VLABEL or DROP ELABEL.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DROP</span> <span class="n">VLABEL</span> <span class="n">person</span><span class="p">;</span>
+<span class="n">ERROR</span><span class="p">:</span>  <span class="n">cannot</span> <span class="n">drop</span> <span class="n">person</span> <span class="n">because</span> <span class="n">it</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">empty</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">DROP</span> <span class="pre">...</span> <span class="pre">CASCADE</span></code> to delete a label regardless of whether it is bound to or not, and in this case, all data object that has this label is deleted along with it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DROP</span> <span class="n">VLABEL</span> <span class="n">person</span> <span class="n">CASCADE</span><span class="p">;</span>
+<span class="n">NOTICE</span><span class="p">:</span>  <span class="n">drop</span> <span class="n">cascades</span> <span class="n">to</span> <span class="n">vlabel</span> <span class="n">friend</span>
+<span class="n">DROP</span> <span class="n">VLABEL</span>
+
+<span class="n">DROP</span> <span class="n">ELABEL</span> <span class="n">knows</span> <span class="n">CASCADE</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="detailed-description">
+<h3><strong>Detailed Description</strong><a class="headerlink" href="#detailed-description" title="Permalink to this heading"></a></h3>
+<section id="id2">
+<h4><strong>GRAPH</strong><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<p><em><strong>CREATE GRAPH</strong></em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">GRAPH</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">NOT</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">graph</span>\<span class="n">_name</span> <span class="p">[</span><span class="n">AUTHORIZATION</span> <span class="n">role</span>\<span class="n">_name</span><span class="p">];</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>IF NOT EXISTS</p>
+<ul>
+<li><p>Do nothing if the same name already exists</p></li>
+</ul>
+</li>
+<li><p>AUTHORIZATION role_name</p>
+<ul>
+<li><p>The role name of the user who will own the new graph</p></li>
+</ul>
+</li>
+</ul>
+<p><em><strong>ALTER GRAPH</strong></em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ALTER</span> <span class="n">GRAPH</span> <span class="n">graph</span>\<span class="n">_name</span> <span class="n">RENAME</span> <span class="n">TO</span> <span class="n">new</span>\<span class="n">_name</span><span class="p">;</span>                 
+<span class="n">ALTER</span> <span class="n">GRAPH</span> <span class="n">graph</span>\<span class="n">_name</span> <span class="n">OWNER</span> <span class="n">TO</span> <span class="p">{</span> <span class="n">new</span>\<span class="n">_owner</span> <span class="o">|</span> <span class="n">CURRENT</span>\<span class="n">_USER</span> <span class="o">|</span> <span class="n">SESSION</span>\<span class="n">_USER</span> <span class="p">};</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>graph_name</p>
+<ul>
+<li><p>The name of an existing graph.</p></li>
+</ul>
+</li>
+<li><p>RENAME TO new_name</p>
+<ul>
+<li><p>This form changes the name of a graph to new_name.</p></li>
+</ul>
+</li>
+<li><p>OWNER TO new_owner</p>
+<ul>
+<li><p>This form changes the owner of the graph.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="label">
+<h4><strong>LABEL</strong><a class="headerlink" href="#label" title="Permalink to this heading"></a></h4>
+<p><em><strong>CREATE LABEL</strong></em></p>
+<p>The synopsis of both VLABEL and ELABEL is identical.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="p">[</span> <span class="n">UNLOGGED</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">NOT</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">label</span>\<span class="n">_name</span> <span class="p">[</span><span class="n">DISABLE</span> <span class="n">INDEX</span><span class="p">]</span>
+       <span class="p">[</span> <span class="n">INHERITS</span> <span class="p">(</span> <span class="n">parent</span>\<span class="n">_label</span>\<span class="n">_name</span> <span class="p">[,</span> <span class="o">...</span><span class="p">]</span> <span class="p">)</span> <span class="p">]</span>
+       <span class="p">[</span> <span class="n">WITH</span> <span class="p">(</span><span class="n">storage</span>\<span class="n">_parameter</span><span class="p">)]</span>
+       <span class="p">[</span> <span class="n">TABLESPACE</span> <span class="n">tablespace</span>\<span class="n">_name</span> <span class="p">];</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>UNLOGGED</p>
+<ul>
+<li><p>Data written to an unlogged label is not recorded to the write-ahead log, which makes unlogged labels considerably faster than logged labels. However, unlogged labels are not crash-safe.</p></li>
+</ul>
+</li>
+<li><p>IF NOT EXISTS</p>
+<ul>
+<li><p>Do nothing if the same name already exists.</p></li>
+</ul>
+</li>
+<li><p>label_name</p>
+<ul>
+<li><p>The name of the vertex/edge label to be created.</p></li>
+</ul>
+</li>
+<li><p>DISABLE INDEX</p>
+<ul>
+<li><p>Create a label with invalid index. The invalid indexes can not be used for searching or inserting until reindexed.</p></li>
+</ul>
+</li>
+<li><p>INHERITS ( parent_label [, …] )</p>
+<ul>
+<li><p>The optional INHERITS clause specifies a list of vertex/edge labels. If it is empty, the new label inherits the initial label. Use of INHERITS creates a persistent edge between the new child label and its parent label(s). The data of the child label is included in scans of the parent(s) by default.</p></li>
+</ul>
+</li>
+<li><p>TABLESPACE tablespace_name</p>
+<ul>
+<li><p>The new label will be created in the tablespace whose name is tablespace_name.</p></li>
+</ul>
+</li>
+</ul>
+<p><em><strong>ALTER LABEL</strong></em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ALTER</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">RENAME</span> <span class="n">TO</span> <span class="n">new</span>\<span class="n">_name</span><span class="p">;</span>        
+<span class="n">ALTER</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">OWNER</span> <span class="n">TO</span> <span class="n">new</span>\<span class="n">_owner</span><span class="p">;</span>        
+<span class="n">ALTER</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">SET</span> <span class="n">STORAGE</span> <span class="p">{</span> <span class="n">PLAIN</span> <span class="o">|</span> <span class="n">EXTERNAL</span> <span class="o">|</span> <span class="n">EXTENDED</span> <span class="o">|</span> <span class="n">MAIN</span> <span class="p">};</span>        
+<span class="n">ALTER</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">SET</span> <span class="n">TABLESPACE</span> <span class="n">new</span>\<span class="n">_tablespace</span><span class="p">;</span>        
+<span class="n">ALTER</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">CLUSTER</span> <span class="n">ON</span> <span class="n">idxname</span><span class="p">;</span>        
+<span class="n">ALTER</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">SET</span> <span class="n">WITHOUT</span> <span class="n">CLUSTER</span><span class="p">;</span>        
+<span class="n">ALTER</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">SET</span> <span class="n">LOGGED</span><span class="p">;</span>        
+<span class="n">ALTER</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">SET</span> <span class="n">UNLOGGED</span><span class="p">;</span>        
+<span class="n">ALTER</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">INHERIT</span> <span class="n">parent</span>\<span class="n">_label</span><span class="p">;</span>        
+<span class="n">ALTER</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">NO</span> <span class="n">INHERIT</span> <span class="n">parent</span>\<span class="n">_label</span><span class="p">;</span>        
+<span class="n">ALTER</span> <span class="p">[</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="p">]</span> <span class="n">VLABEL</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">DISABLE</span> <span class="n">INDEX</span><span class="p">;</span>       
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>IF EXISTS</p>
+<ul>
+<li><p>Do not throw an error if the label does not exist.</p></li>
+</ul>
+</li>
+<li><p>label_name</p>
+<ul>
+<li><p>The name of an existing vertex/edge label.</p></li>
+</ul>
+</li>
+<li><p>RENAME TO new_name</p>
+<ul>
+<li><p>Changes the name of a label to new_name.</p></li>
+</ul>
+</li>
+<li><p>OWNER TO new_owner</p>
+<ul>
+<li><p>Changes the owner of the label.</p></li>
+</ul>
+</li>
+<li><p>SET STORAGE</p>
+<ul>
+<li><p>This form sets the storage mode for property. This controls whether property is held inline or in a secondary TOAST table, and whether the data should be compressed or not.</p></li>
+<li><p>PLAIN must be used for fixed-length, inline and uncompressed values.</p></li>
+<li><p>MAIN is inline and compressed.</p></li>
+<li><p>EXTERNAL is external and uncompressed.</p></li>
+<li><p>EXTENDED is external and compressed.</p></li>
+</ul>
+</li>
+<li><p>SET TABLESPACE</p>
+<ul>
+<li><p>This form changes the label’s tablespace to the specified tablespace and moves the data files to the new tablespace. Indexes on the label are not moved.</p></li>
+</ul>
+</li>
+<li><p>CLUSTER/WITHOUT CLUSTER</p>
+<ul>
+<li><p>This form select/remove the default index for future cluster operation. <a class="reference external" href="https://www.postgresql.org/docs/current/static/sql-cluster.html">See this</a>.</p></li>
+</ul>
+</li>
+<li><p>SET LOGGED/UNLOGGED</p>
+<ul>
+<li><p>This form changes the label from unlogged to logged or vice-versa.</p></li>
+</ul>
+</li>
+<li><p>INHERIT/NO INHERIT</p>
+<ul>
+<li><p>This form adds/removes the target label to/from the parent label’s children list.</p></li>
+</ul>
+</li>
+<li><p>DISABLE INDEX</p>
+<ul>
+<li><p>This form changes all indexes of the label to invalid index. The invalid indexes can not be used for searching or inserting until reindexed.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="property-index">
+<h4><strong>Property Index</strong><a class="headerlink" href="#property-index" title="Permalink to this heading"></a></h4>
+<p>The property index provides a method to build indexes on the property values. Users can also create an index for an expression.</p>
+<p><em><strong>CREATE INDEX</strong></em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="p">[</span><span class="n">UNIQUE</span><span class="p">]</span> <span class="n">PROPERTY</span> <span class="n">INDEX</span> <span class="p">[</span><span class="n">CONCURRENTLY</span><span class="p">]</span> <span class="p">[</span><span class="n">IF</span> <span class="n">NOT</span> <span class="n">EXIST</span><span class="p">]</span> <span class="n">indexname</span>
+<span class="n">ON</span> <span class="n">labelname</span> <span class="p">[</span><span class="n">USING</span> <span class="n">method</span><span class="p">]</span>
+<span class="p">(</span> <span class="n">attribute</span>\<span class="n">_expr</span> <span class="o">|</span> <span class="p">(</span><span class="n">expr</span><span class="p">)</span> <span class="p">[</span><span class="n">COLLATE</span> <span class="n">collation</span><span class="p">]</span> <span class="p">[</span><span class="n">opclass</span><span class="p">]</span> <span class="p">[</span><span class="n">ASC</span> <span class="o">|</span> <span class="n">DESC</span><span class="p">]</span>
+<span class="p">[</span><span class="n">NULLS</span> <span class="p">{</span><span class="n">FIRST</span> <span class="o">|</span> <span class="n">LAST</span><span class="p">}]</span>  <span class="p">)</span>
+<span class="p">[</span><span class="n">WITH</span><span class="p">]</span> <span class="p">(</span><span class="n">storage</span>\<span class="n">_parameter</span> <span class="o">=</span> <span class="n">value</span> <span class="p">[,</span><span class="o">...</span><span class="p">])</span>
+<span class="p">[</span><span class="n">TABLESPACE</span> <span class="n">tablespacename</span><span class="p">]</span>
+<span class="p">[</span><span class="n">WHERE</span> <span class="n">predicate</span><span class="p">];</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>UNIQUE</p>
+<ul>
+<li><p>Causes the system to check for duplicate values in the table when the index is created if the data already exists and each time data is added. Attempts to insert or update data which would result in duplicate entries will generate an error.</p></li>
+</ul>
+</li>
+<li><p>CONCURRENTLY</p>
+<ul>
+<li><p>With this option, the index will be built without taking any locks that prevent concurrent<br />CREATE, DELETE(DETACH), SET on the label. There are several caveats to be aware of when using this option. <a class="reference external" href="https://www.postgresql.org/docs/9.5/static/sql-createindex.html#SQL-CREATEINDEX-CONCURRENTLY">See this</a>.</p></li>
+</ul>
+</li>
+<li><p>IF NOT EXIST</p>
+<ul>
+<li><p>Do nothing if the same name already exists</p></li>
+</ul>
+</li>
+<li><p>indexname</p>
+<ul>
+<li><p>The name of the index to be created. If it is omitted, AgensGraph chooses an adequate name.</p></li>
+</ul>
+</li>
+<li><p>labelname</p>
+<ul>
+<li><p>The name of the label to be indexed.</p></li>
+</ul>
+</li>
+<li><p>USING METHOD</p>
+<ul>
+<li><p>The name of the index method to be used. They are btree, hash, gist, spgist, gin and brin.<br />The default method is btree.</p></li>
+</ul>
+</li>
+<li><p>attribute_expr</p>
+<ul>
+<li><p>An expression which is pointing to the attribute of property.</p></li>
+</ul>
+</li>
+<li><p>COLLATE collation</p>
+<ul>
+<li><p>The name of the collation to use for the index. By default, the index uses the collation declared for the column to be indexed or the result collation of the expression to be indexed. Indexes with non-default collations can be useful for queries that involve expressions using non-default collations.</p></li>
+</ul>
+</li>
+<li><p>opclass</p>
+<ul>
+<li><p>The name of an operator class.</p></li>
+</ul>
+</li>
+<li><p>ASC | DESC</p>
+<ul>
+<li><p>Specified ascending/descending sort order. ASC is the default.</p></li>
+</ul>
+</li>
+<li><p>NULLS { FIRST | LAST }</p>
+<ul>
+<li><p>Specifies that nulls sort before/after non-nulls. LAST is default when ASC is specified.</p></li>
+</ul>
+</li>
+<li><p>WITH storage_parameter</p>
+<ul>
+<li><p>The name of an index-method-specific storage parameter. See <a class="reference external" href="https://www.postgresql.org/docs/current/static/sql-createindex.html#SQL-CREATEINDEX-STORAGE-PARAMETERS">Index Storage Parameters</a> for details.</p></li>
+</ul>
+</li>
+<li><p>TABLESPACE tablespacename</p>
+<ul>
+<li><p>The tablespace in which to create the index.</p></li>
+</ul>
+</li>
+<li><p>WHERE predicate</p>
+<ul>
+<li><p>The constraint expression for a partial index.</p></li>
+</ul>
+</li>
+</ul>
+<p><em><strong>DROP INDEX</strong></em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DROP</span> <span class="n">PROPERTY</span> <span class="n">INDEX</span> <span class="n">indexname</span> <span class="p">[</span><span class="n">CASCADE</span> <span class="o">|</span> <span class="n">RESTRICT</span><span class="p">];</span>       
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>indexname</p>
+<ul>
+<li><p>The indexname can be checked with <code class="docutils literal notranslate"><span class="pre">ag\_property\_indexes</span></code> or <code class="docutils literal notranslate"><span class="pre">\dGi</span></code>.</p></li>
+</ul>
+</li>
+<li><p>CASCADE</p>
+<ul>
+<li><p>Automatically drop objects that depend on the graph.</p></li>
+</ul>
+</li>
+<li><p>RESTRICT</p>
+<ul>
+<li><p>Refuse to drop the index if any objects depend on it. This is the default.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="constraints">
+<h4><strong>Constraints</strong><a class="headerlink" href="#constraints" title="Permalink to this heading"></a></h4>
+<p>This section provides information about how to use constraints on properties. Users can create two types of constraints; UNIQUE constraint and CHECK constraint.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">CONSTRAINT</span> <span class="n">constraint</span>\<span class="n">_name</span> <span class="n">ON</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">ASSERT</span> <span class="n">field</span>\<span class="n">_expr</span> <span class="n">IS</span> <span class="n">UNIQUE</span><span class="p">;</span>
+<span class="n">CREATE</span> <span class="n">CONSTRAINT</span> <span class="n">constraint</span>\<span class="n">_name</span> <span class="n">ON</span> <span class="n">label</span>\<span class="n">_name</span> <span class="n">ASSERT</span> <span class="n">check</span>\<span class="n">_expr</span><span class="p">;</span>
+<span class="n">DROP</span> <span class="n">CONSTRAINT</span> <span class="n">constraint</span>\<span class="n">_name</span> <span class="n">ON</span> <span class="n">label</span>\<span class="n">_name</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>field_expr</p>
+<ul>
+<li><p>This form represents a JSON expression. This JSON can be a nested JSON.</p></li>
+</ul>
+</li>
+<li><p>UNIQUE</p>
+<ul>
+<li><p>This form specified that json_expression can contain only unique values.</p></li>
+</ul>
+</li>
+<li><p>check_expr</p>
+<ul>
+<li><p>The check expression returns a boolean result for new or updated properties. The result must be TRUE or UNKNOWN for an insert or update to succeed. Should any property of an insert or update operation produce a FALSE result, an error exception is raised and the insert or update will rolled back.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="agensgraph-query">
+<h1><strong>AgensGraph Query</strong><a class="headerlink" href="#agensgraph-query" title="Permalink to this heading"></a></h1>
+<section id="graph-query">
+<h2><strong>Graph Query</strong><a class="headerlink" href="#graph-query" title="Permalink to this heading"></a></h2>
+<section id="introduction">
+<h3><strong>Introduction</strong><a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h3>
+<p>To retrieve and manipulate graph data, AgensGraph supports the Cypher query language. Cypher is a declarative language similar to SQL. Cypher is easy to learn since its syntax visually describes the patterns found in graphs.</p>
+<p>This guide briefly explains how to write Cypher queries using an example graph.</p>
+</section>
+<section id="creating-an-example-graph">
+<h3><strong>Creating an Example Graph</strong><a class="headerlink" href="#creating-an-example-graph" title="Permalink to this heading"></a></h3>
+<p>AgensGraph can store multiple graphs in a single database. However, Cypher has no way of discerning multiple graphs. Therefore, AgensGraph supports additional Data Definition Languages and variables to create and manage graphs using Cypher.</p>
+<p>The following statements create a graph called <em>network</em> and set it as a current graph.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">CREATE</span><span class="o">**</span> <span class="n">GRAPH</span> <span class="o">**</span><span class="n">network</span><span class="o">**</span><span class="p">;</span>
+<span class="o">**</span><span class="n">SET</span><span class="o">**</span> <span class="n">graph</span>\<span class="n">_path</span> <span class="o">=</span> <span class="o">**</span><span class="n">network</span><span class="o">**</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In this example, the <em>graph_path</em> variable is explicitly set to <em>network</em>. However, if <em>graph_path</em> is not set before creating the graph, it will be set automatically after creating the graph.</p>
+<section id="creating-the-labels">
+<h4><strong>Creating the Labels</strong><a class="headerlink" href="#creating-the-labels" title="Permalink to this heading"></a></h4>
+<p>Before creating graph data, generating a label is basic. Although this is the default, label is generated automatically when you specify label in the CREATE statement in cypher(VLABEL/ELABEL can both be created).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">note</span><span class="p">:</span> <span class="n">Be</span> <span class="n">careful</span> <span class="ow">not</span> <span class="n">to</span> <span class="n">confuse</span> <span class="n">the</span> <span class="n">label</span> <span class="k">with</span> <span class="n">the</span> <span class="n">lable</span><span class="o">.</span> <span class="n">Unintentional</span> <span class="n">new</span> <span class="n">labels</span> <span class="n">can</span> <span class="n">be</span> <span class="n">created</span><span class="o">.*</span>
+</pre></div>
+</div>
+<p>All graph elements have one label. For vertex, if no label is specified, have <code class="docutils literal notranslate"><span class="pre">ag\_vertex</span></code> as a default label. For edge, the label can not be omitted. <code class="docutils literal notranslate"><span class="pre">ag\_edge</span></code> label also exists but is used for other purposes.</p>
+<p>AgensGraph supports DDL’s to create such labels.</p>
+<p>The following statements create a vertex label <em>person</em> and an edge label <em>knows</em>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">CREATE</span><span class="o">**</span> <span class="n">VLABEL</span> <span class="n">person</span><span class="p">;</span>
+<span class="o">**</span><span class="n">CREATE</span><span class="o">**</span> <span class="n">ELABEL</span> <span class="n">knows</span><span class="p">;</span>
+<span class="o">**</span><span class="n">CREATE</span><span class="o">**</span> <span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="n">movie</span> <span class="p">{</span><span class="n">title</span><span class="p">:</span><span class="s1">&#39;Matrix&#39;</span><span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-the-vertices-and-edges">
+<h4><strong>Creating the Vertices and Edges</strong><a class="headerlink" href="#creating-the-vertices-and-edges" title="Permalink to this heading"></a></h4>
+<p>Now, we can create vertices for <em>person</em> and edges for <em>knows</em> by using Cypher’s <code class="docutils literal notranslate"><span class="pre">CREATE</span></code> clause. The <code class="docutils literal notranslate"><span class="pre">CREATE</span></code> clause creates a pattern that consists of vertices and edges. A vertex has the form: <code class="docutils literal notranslate"><span class="pre">(variable:label</span> <span class="pre">{property:</span> <span class="pre">value,</span> <span class="pre">...})</span></code>, and an edge has: <code class="docutils literal notranslate"><span class="pre">-[variable:label</span> <span class="pre">{property:</span> <span class="pre">value,</span> <span class="pre">...}]-</span></code>. An additional <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> on the leftmost side or <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> on the rightmost side is used to denote the direction of the edge. <code class="docutils literal notranslate"><span class="pre">variable</span></code> can be omitted if created vertices and edges are not to be referenced.</p>
+<blockquote>
+<div><p><em>note: AgensGraph does not support – grammar for an edge in a pattern because – means a comment to the end of the line.</em></p>
+</div></blockquote>
+<p>The following statements create three simple patterns: “Tom knows Summer”, “Pat knows Nikki” and “Olive knows Todd”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="p">(:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Tom&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[:</span><span class="n">knows</span> <span class="p">{</span><span class="n">fromdate</span><span class="p">:</span><span class="s1">&#39;2011-11-24&#39;</span><span class="p">}]</span><span class="o">-&gt;</span><span class="p">(:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Summer&#39;</span><span class="p">});</span>
+<span class="n">CREATE</span> <span class="p">(:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Pat&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[:</span><span class="n">knows</span> <span class="p">{</span><span class="n">fromdate</span><span class="p">:</span><span class="s1">&#39;2013-12-25&#39;</span><span class="p">}]</span><span class="o">-&gt;</span><span class="p">(:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Nikki&#39;</span><span class="p">});</span>
+<span class="n">CREATE</span> <span class="p">(:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Olive&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[:</span><span class="n">knows</span> <span class="p">{</span><span class="n">fromdate</span><span class="p">:</span><span class="s1">&#39;2015-01-26&#39;</span><span class="p">}]</span><span class="o">-&gt;</span><span class="p">(:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Todd&#39;</span><span class="p">});</span>
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Tom&#39;</span><span class="p">}),(</span><span class="n">k</span><span class="p">:</span><span class="n">Person</span><span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Pat&#39;</span><span class="p">})</span> 
+<span class="n">CREATE</span> <span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">-</span><span class="p">[:</span><span class="n">KNOWS</span> <span class="p">{</span><span class="n">fromdate</span><span class="p">:</span><span class="s1">&#39;2017-02-27&#39;</span><span class="p">}</span> <span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To store properties of vertices and edges, AgensGraph uses PostgreSQL’s <em>jsonb</em> type. Properties can have nested JSON objects as their values. Since AgensGraph uses PostgreSQL’s type system, any data type supported by PostgreSQL can be stored into the properties of vertices and edges.</p>
+</section>
+</section>
+<section id="querying-the-graph">
+<h3><strong>Querying the Graph</strong><a class="headerlink" href="#querying-the-graph" title="Permalink to this heading"></a></h3>
+<p>Let’s retrieve the pattern we created above. Cypher has the <code class="docutils literal notranslate"><span class="pre">MATCH</span></code> clause to find a pattern in a graph.</p>
+<p>The following statement finds the pattern, “A person called Tom knows a person”.</p>
+<p>MATCH (n:person {name: ‘Tom’})-[:knows]-&gt;(m:person) <strong>RETURN</strong> n.name <strong>AS</strong> n, m.name <strong>AS</strong> m;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">n</span>   <span class="o">|</span>    <span class="n">m</span>
+
+<span class="o">-------+----------</span>
+
+ <span class="s2">&quot;Tom&quot;</span> <span class="o">|</span> <span class="s2">&quot;Summer&quot;</span>
+
+ <span class="s2">&quot;Tom&quot;</span> <span class="o">|</span> <span class="s2">&quot;Pat&quot;</span>
+
+<span class="p">(</span><span class="mi">2</span> <span class="o">**</span><span class="n">rows</span><span class="o">**</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Since properties are of the <em>jsonb</em> type, we need methods to access their property values. PostgreSQL supports those methods through operators such as <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">-&gt;&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">#&gt;</span></code>, and <code class="docutils literal notranslate"><span class="pre">#&gt;&gt;</span></code>. If a user wants to access the property <em>name</em> of vertex <em>m</em>, one can write <code class="docutils literal notranslate"><span class="pre">(m)-&gt;&gt;name</span></code>. AgensGraph offers an alternate way to access these elements. AgensGraph uses the dot operator . and bracket operators <code class="docutils literal notranslate"><span class="pre">[]</span></code> on vertices and edges to access property values in JSON objects and elements in JSON arrays as shown above.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">RETURN</span></code> clause returns variables and its properties as a result of the query. The result is a table which has multiple matched patterns in its rows.</p>
+<p><em><strong>Variable Length Edges</strong></em></p>
+<p>Let’s consider a query that finds knows of ‘Tom’ and knows of knows. We can use the <code class="docutils literal notranslate"><span class="pre">UNION</span></code> clause:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MATCH</span> <span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Tom&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[:</span><span class="n">knows</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">f</span><span class="p">:</span><span class="n">person</span><span class="p">)</span>
+<span class="n">RETURN</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span>
+<span class="n">UNION</span> <span class="n">ALL</span>
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Tom&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[:</span><span class="n">knows</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">()</span><span class="o">-</span><span class="p">[:</span><span class="n">knows</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">f</span><span class="p">:</span><span class="n">person</span><span class="p">)</span>
+<span class="n">RETURN</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>It can also be written as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MATCH</span> <span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Tom&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[</span><span class="n">r</span><span class="p">:</span><span class="n">knows</span>\<span class="o">*</span><span class="mf">1..2</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">f</span><span class="p">:</span><span class="n">person</span><span class="p">)</span>
+<span class="n">RETURN</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">fromdate</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>A query looking for vertices located after a variable length of edge-vertex paths is typical in graph databases. <code class="docutils literal notranslate"><span class="pre">*1..2</span></code> used in the edge represents such a variable-length edge. Where <code class="docutils literal notranslate"><span class="pre">1</span></code> is the minimum length of the edge and <code class="docutils literal notranslate"><span class="pre">2</span></code> is the maximum length. If you do not specify a value, the default range values are 1 and infinity.</p>
+<p>You can also use update clauses such as <code class="docutils literal notranslate"><span class="pre">CREATE</span></code>, <code class="docutils literal notranslate"><span class="pre">SET</span></code>, <code class="docutils literal notranslate"><span class="pre">REMOVE</span></code> and <code class="docutils literal notranslate"><span class="pre">DELETE</span></code> after <code class="docutils literal notranslate"><span class="pre">MATCH</span></code> clauses. In the next section, we will see how data in a graph can be modified and deleted.</p>
+</section>
+<section id="manipulating-the-graph">
+<h3><strong>Manipulating the Graph</strong><a class="headerlink" href="#manipulating-the-graph" title="Permalink to this heading"></a></h3>
+<p>You can set properties on vertices and edges using the <code class="docutils literal notranslate"><span class="pre">SET</span></code> clause. If you set a null value to a property, the property will be removed.</p>
+<p>The following statement finds the given pattern and updates the property in the matched edge.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MATCH</span> <span class="p">(:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Tom&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[</span><span class="n">r</span><span class="p">:</span><span class="n">knows</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Summer&#39;</span><span class="p">})</span>
+<span class="n">SET</span> <span class="n">r</span><span class="o">.</span><span class="n">since</span> <span class="o">=</span> <span class="s1">&#39;2009-01-08&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>To delete vertices and edges in a graph, we can use the DELETE clause.</p>
+<p>The following statement finds a vertex and deletes it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MATCH</span> <span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Pat&#39;</span><span class="p">})</span> <span class="n">DETACH</span> <span class="n">DELETE</span> <span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The above example actually uses the <code class="docutils literal notranslate"><span class="pre">DETACH</span> <span class="pre">DELETE</span></code> clause to delete vertices and edges attached to the vertices all at once.</p>
+<p>The final shape of the graph <em>network</em> is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MATCH</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="n">RETURN</span> <span class="n">n</span><span class="o">.</span><span class="n">name</span> <span class="n">AS</span> <span class="n">n</span><span class="p">,</span> <span class="n">properties</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="n">AS</span> <span class="n">r</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">name</span> <span class="n">AS</span> <span class="n">m</span><span class="p">;</span>
+
+    <span class="n">n</span>    <span class="o">|</span>                         <span class="n">r</span>                         <span class="o">|</span>    <span class="n">m</span>
+
+<span class="o">---------+---------------------------------------------------+----------</span>
+
+ <span class="s2">&quot;Tom&quot;</span>   <span class="o">|</span> <span class="p">{</span><span class="s2">&quot;since&quot;</span><span class="p">:</span> <span class="s2">&quot;2009-01-08&quot;</span><span class="p">,</span> <span class="s2">&quot;fromdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2011-11-24&quot;</span><span class="p">}</span> <span class="o">|</span> <span class="s2">&quot;Summer&quot;</span>
+
+ <span class="s2">&quot;Olive&quot;</span> <span class="o">|</span> <span class="p">{</span><span class="s2">&quot;fromdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-01-26&quot;</span><span class="p">}</span>                        <span class="o">|</span> <span class="s2">&quot;Todd&quot;</span>
+
+<span class="p">(</span><span class="mi">2</span> <span class="n">rows</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="merge">
+<h3><strong>MERGE</strong><a class="headerlink" href="#merge" title="Permalink to this heading"></a></h3>
+<p>If you need to ensure that a pattern exists in the graph, you can use <code class="docutils literal notranslate"><span class="pre">MERGE</span></code>. It will try to find the pattern if the pattern exists in the graph, or else it creates the pattern if it does not exist. If the pattern exists, it is treated like a <code class="docutils literal notranslate"><span class="pre">MATCH</span></code> clause, otherwise it is treated like a <code class="docutils literal notranslate"><span class="pre">CREATE</span></code> clause. <code class="docutils literal notranslate"><span class="pre">MERGE</span></code> is a <code class="docutils literal notranslate"><span class="pre">MATCH</span></code> or <code class="docutils literal notranslate"><span class="pre">CREATE</span></code> of the entire pattern. This means that if any element of the pattern does NOT exist, AgensGraph will create the entire pattern.</p>
+<p>The following statement guarantees that everyone’s city exists in the graph.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">VLABEL</span> <span class="n">customer</span><span class="p">;</span>
+<span class="n">CREATE</span> <span class="n">VLABEL</span> <span class="n">city</span><span class="p">;</span>
+
+<span class="n">CREATE</span> <span class="p">(:</span><span class="n">customer</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Tom&#39;</span><span class="p">,</span> <span class="n">city</span><span class="p">:</span><span class="s1">&#39;santa clara&#39;</span><span class="p">}),</span>
+       <span class="p">(:</span><span class="n">customer</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Summer &#39;</span><span class="p">,</span> <span class="n">city</span><span class="p">:</span><span class="s1">&#39;san jose&#39;</span><span class="p">}),</span>
+       <span class="p">(:</span><span class="n">customer</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Pat&#39;</span><span class="p">,</span> <span class="n">city</span><span class="p">:</span><span class="s1">&#39;santa clara&#39;</span><span class="p">}),</span>
+       <span class="p">(:</span><span class="n">customer</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Nikki&#39;</span><span class="p">,</span> <span class="n">city</span><span class="p">:</span><span class="s1">&#39;san jose&#39;</span><span class="p">}),</span>
+       <span class="p">(:</span><span class="n">customer</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Olive&#39;</span><span class="p">,</span> <span class="n">city</span><span class="p">:</span><span class="s1">&#39;san francisco&#39;</span><span class="p">});</span>
+
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">customer</span><span class="p">)</span>
+<span class="n">MERGE</span> <span class="p">(</span><span class="n">c</span><span class="p">:</span><span class="n">city</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="n">a</span><span class="o">.</span><span class="n">city</span><span class="p">});</span>
+
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">c</span><span class="p">:</span><span class="n">city</span><span class="p">)</span> <span class="o">**</span><span class="n">RETURN</span><span class="o">**</span> <span class="n">properties</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+       <span class="n">properties</span>        
+
+<span class="o">-------------------------</span>
+  <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;santa clara&quot;</span><span class="p">}</span>
+  <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;san jose&quot;</span><span class="p">}</span>
+  <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;san francisco&quot;</span><span class="p">}</span>
+<span class="p">(</span><span class="mi">3</span> <span class="n">rows</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">MERGE</span></code> can perform <code class="docutils literal notranslate"><span class="pre">SET</span></code> depending on whether the pattern is MATCHed or CREATed. If it is MATCHed, it will execute the <code class="docutils literal notranslate"><span class="pre">ON</span> <span class="pre">MATCH</span> <span class="pre">SET</span></code> clause. If it is CREATE-ed, it will execute the <code class="docutils literal notranslate"><span class="pre">ON</span> <span class="pre">CREATE</span> <span class="pre">SET</span></code> clause.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="p">(:</span><span class="n">customer</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Todd&#39;</span><span class="p">,</span> <span class="n">city</span><span class="p">:</span><span class="s1">&#39;palo alto&#39;</span><span class="p">});</span>
+
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">customer</span><span class="p">)</span>
+<span class="n">MERGE</span> <span class="p">(</span><span class="n">c</span><span class="p">:</span><span class="n">city</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="n">a</span><span class="o">.</span><span class="n">city</span><span class="p">})</span>
+    <span class="n">ON</span> <span class="n">MATCH</span> <span class="n">SET</span> <span class="n">c</span><span class="o">.</span><span class="n">matched</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span>
+    <span class="n">ON</span> <span class="n">CREATE</span> <span class="n">SET</span> <span class="n">c</span><span class="o">.</span><span class="n">created</span> <span class="o">=</span> <span class="s1">&#39;true&#39;</span><span class="p">;</span>
+
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">c</span><span class="p">:</span><span class="n">city</span><span class="p">)</span> <span class="n">RETURN</span> <span class="n">properties</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+                   <span class="n">properties</span>
+<span class="o">----------------------------------------------</span>
+
+  <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;santa clara&quot;</span><span class="p">,</span> <span class="s2">&quot;matched&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">}</span>
+  <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;san jose&quot;</span><span class="p">,</span> <span class="s2">&quot;matched&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">}</span>
+  <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;san francisco&quot;</span><span class="p">,</span> <span class="s2">&quot;matched&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">}</span>
+  <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;palo alto&quot;</span><span class="p">,</span> <span class="s2">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">}</span>
+<span class="p">(</span><span class="mi">4</span> <span class="n">rows</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The default isolation level of the transaction is Read committed on AgensGraph. Therefore, if another transaction executes <code class="docutils literal notranslate"><span class="pre">MERGE</span></code> for the same pattern at the same time, two (or more) identical patterns can be created at the same time. To prevent this, you can execute a transaction at the serializable isolation level as in the example below. If an attempt is made to create the same pattern concurrently, one transaction fails with an error. If you retry a failed transaction, it will behave like <code class="docutils literal notranslate"><span class="pre">MATCH</span></code> instead of <code class="docutils literal notranslate"><span class="pre">CREATE</span></code> because of the pattern created by the succeeded transaction already exists.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BEGIN</span><span class="p">;</span>
+<span class="n">SET</span> <span class="n">TRANSACTION</span> <span class="n">ISOLATION</span> <span class="n">LEVEL</span> <span class="n">SERIALIZABLE</span><span class="p">;</span>
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">customer</span><span class="p">)</span>
+<span class="n">MERGE</span> <span class="p">(</span><span class="n">c</span><span class="p">:</span><span class="n">city</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="n">a</span><span class="o">.</span><span class="n">city</span><span class="p">});</span>
+<span class="n">COMMIT</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="finding-the-shortest-path">
+<h3><strong>Finding the Shortest Path</strong><a class="headerlink" href="#finding-the-shortest-path" title="Permalink to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">shortestpath</span></code> function can be used to find the shortest path between two vertices. If you want to find all paths, you can use the <code class="docutils literal notranslate"><span class="pre">allshortestpaths</span></code> function.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MATCH</span> <span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Tom&#39;</span><span class="p">}),</span> <span class="p">(</span><span class="n">f</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Olive&#39;</span><span class="p">})</span> <span class="n">CREATE</span> <span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">-</span><span class="p">[:</span><span class="n">knows</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">p1</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Tom&#39;</span><span class="p">}),</span> <span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Todd&#39;</span><span class="p">}),</span> 
+      <span class="n">path</span><span class="o">=</span><span class="n">shortestpath</span><span class="p">((</span><span class="n">p1</span><span class="p">)</span><span class="o">-</span><span class="p">[:</span><span class="n">knows</span>\<span class="o">*</span><span class="mf">1..5</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">))</span> <span class="n">RETURN</span> <span class="n">path</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In this example, we create a ‘knows’ edge path from ‘Tom’ to ‘Olive’. To find the ‘knows’ path from ‘Tom’ to ‘Todd’, we can use the <code class="docutils literal notranslate"><span class="pre">shortestpath</span></code> function. The <code class="docutils literal notranslate"><span class="pre">shortestpath</span></code> function takes a pattern consisting of a start vertex, an edge and an end vertex. We can use a variable length edge expression in the edge to specify if we are looking for a certain degree of connection.</p>
+<p>The query results are as follows.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">person</span><span class="p">[</span><span class="mf">3.1</span><span class="p">]{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Tom&quot;</span><span class="p">},</span><span class="n">knows</span><span class="p">[</span><span class="mf">4.5</span><span class="p">][</span><span class="mf">3.1</span><span class="p">,</span><span class="mf">3.5</span><span class="p">]{},</span><span class="n">person</span><span class="p">[</span><span class="mf">3.5</span><span class="p">]{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Olive&quot;</span><span class="p">},</span><span class="n">knows</span><span class="p">[</span><span class="mf">4.3</span><span class="p">][</span><span class="mf">3.5</span><span class="p">,</span><span class="mf">3.6</span><span class="p">]</span>
+<span class="p">{</span><span class="s2">&quot;fromdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-01-26&quot;</span><span class="p">},</span><span class="n">person</span><span class="p">[</span><span class="mf">3.6</span><span class="p">]{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Todd&quot;</span><span class="p">}]</span>
+</pre></div>
+</div>
+</section>
+<section id="finding-the-edge-head-tail-last">
+<h3><strong>Finding the Edge (Head, Tail, Last)</strong><a class="headerlink" href="#finding-the-edge-head-tail-last" title="Permalink to this heading"></a></h3>
+<p>The Head, Tail, Last each functions can be used to find the Edges between two vertices.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">create</span> <span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">person</span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Tom&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[</span><span class="n">e</span><span class="p">:</span><span class="n">knows</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">person</span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Olive&#39;</span><span class="p">});</span>
+<span class="n">create</span> <span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">person</span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Tomas&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[</span><span class="n">e</span><span class="p">:</span><span class="n">knows</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">person</span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="s1">&#39;Todd&#39;</span><span class="p">});</span>
+<span class="k">match</span> <span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">person</span><span class="p">),</span> <span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">person</span><span class="p">)</span> <span class="n">where</span> <span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Olive&#39;</span> <span class="ow">and</span> <span class="n">p2</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Tomas&#39;</span>
+<span class="n">create</span> <span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="n">e</span><span class="p">:</span><span class="n">unknows</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span>
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">p1</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Tom&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[</span><span class="n">e</span>\<span class="o">*</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Todd&#39;</span><span class="p">})</span> <span class="n">RETURN</span> <span class="n">e</span><span class="p">;</span>
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">p1</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Tom&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[</span><span class="n">e</span>\<span class="o">*</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Todd&#39;</span><span class="p">})</span> <span class="n">RETURN</span> <span class="n">head</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">p1</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Tom&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[</span><span class="n">e</span>\<span class="o">*</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Todd&#39;</span><span class="p">})</span> <span class="n">RETURN</span> <span class="n">tail</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">p1</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Tom&#39;</span><span class="p">})</span><span class="o">-</span><span class="p">[</span><span class="n">e</span>\<span class="o">*</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">person</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Todd&#39;</span><span class="p">})</span> <span class="n">RETURN</span> <span class="n">last</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In this example, we create a ‘knows’ edge path from ‘Tom’ to ‘Olive’ and ‘Tomas’ to ‘Todd’ and create a ‘unknows’ edge from ‘Olive’ to ‘Tomas’. To find the each path information from ‘Tom’ to ‘Todd’, we can use the <code class="docutils literal notranslate"><span class="pre">haed</span></code>,‘tail’, ‘last’ function. The head function shows the first edge information, the tail function shows the edge information from the second to the last, and the last function shows the last edge information.</p>
+<p>The query results are as follows.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">e</span><span class="o">*</span><span class="p">]</span>
+<span class="p">[</span><span class="n">knows</span><span class="p">[</span><span class="mf">13.1</span><span class="p">][</span><span class="mf">12.1</span><span class="p">,</span><span class="mf">12.2</span><span class="p">]{},</span><span class="n">unknows</span><span class="p">[</span><span class="mf">14.1</span><span class="p">][</span><span class="mf">12.2</span><span class="p">,</span><span class="mf">12.3</span><span class="p">]{},</span><span class="n">knows</span><span class="p">[</span><span class="mf">13.2</span><span class="p">][</span><span class="mf">12.3</span><span class="p">,</span><span class="mf">12.4</span><span class="p">]{}]</span>
+
+<span class="p">[</span><span class="n">head</span><span class="p">(</span><span class="n">e</span><span class="p">)]</span>
+<span class="n">knows</span><span class="p">[</span><span class="mf">13.1</span><span class="p">][</span><span class="mf">12.1</span><span class="p">,</span><span class="mf">12.2</span><span class="p">]{}</span>
+
+<span class="p">[</span><span class="n">tail</span><span class="p">(</span><span class="n">e</span><span class="p">)]</span>
+<span class="p">[</span><span class="n">unknows</span><span class="p">[</span><span class="mf">14.1</span><span class="p">][</span><span class="mf">12.2</span><span class="p">,</span><span class="mf">12.3</span><span class="p">]{},</span><span class="n">knows</span><span class="p">[</span><span class="mf">13.2</span><span class="p">][</span><span class="mf">12.3</span><span class="p">,</span><span class="mf">12.4</span><span class="p">]{}]</span>
+
+<span class="p">[</span><span class="n">last</span><span class="p">(</span><span class="n">e</span><span class="p">)]</span>
+<span class="n">knows</span><span class="p">[</span><span class="mf">13.2</span><span class="p">][</span><span class="mf">12.3</span><span class="p">,</span><span class="mf">12.4</span><span class="p">]{}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="hybrid-query">
+<h2><strong>Hybrid Query</strong><a class="headerlink" href="#hybrid-query" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3><strong>Introduction</strong><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>In this section, we will see how to use SQL and Cypher together in AgensGraph using the following example graph.
+Hybrid Query performs aggregation and statistical processing on table and column by using SQL query used in RDB,and the Cypher query used by GDB supports better data query than RDB’s Join operation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">GRAPH</span> <span class="n">bitnine</span><span class="p">;</span>
+<span class="n">CREATE</span> <span class="n">VLABEL</span> <span class="n">dev</span><span class="p">;</span>
+<span class="n">CREATE</span> <span class="p">(:</span><span class="n">dev</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;someone&#39;</span><span class="p">,</span> <span class="n">year</span><span class="p">:</span> <span class="mi">2015</span><span class="p">});</span>
+<span class="n">CREATE</span> <span class="p">(:</span><span class="n">dev</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;somebody&#39;</span><span class="p">,</span> <span class="n">year</span><span class="p">:</span> <span class="mi">2016</span><span class="p">});</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">history</span> <span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span>
+<span class="n">AS</span> <span class="n">VALUES</span> <span class="p">(</span><span class="mi">1996</span><span class="p">,</span> <span class="s1">&#39;PostgreSQL&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="s1">&#39;AgensGraph&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<section id="cypher-in-sql">
+<h4><strong>Cypher in SQL</strong><a class="headerlink" href="#cypher-in-sql" title="Permalink to this heading"></a></h4>
+<p>Since the result of a Cypher query is a relation, you can use a Cypher query in the FROM clause of SQL as if it is a subquery. It is possible to use Cypher syntax inside the FROM clause to utilize a dataset of vertex or edge stored in graph DB as data in a SQL statement.</p>
+<p>Syntex :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="p">[</span><span class="n">column</span>\<span class="n">_name</span><span class="p">]</span>
+<span class="n">FROM</span> <span class="p">({</span><span class="n">table</span>\<span class="n">_name</span><span class="o">|</span><span class="n">SQLquery</span><span class="o">|</span><span class="n">CYPHERquery</span><span class="p">})</span>
+<span class="n">WHERE</span> <span class="p">[</span><span class="n">column</span>\<span class="n">_name</span> <span class="o">**</span><span class="n">operator</span><span class="o">**</span> <span class="n">value</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>Example :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">n</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;name&#39;</span> <span class="k">as</span> <span class="n">name</span> 
+<span class="n">FROM</span> <span class="n">history</span><span class="p">,</span> <span class="p">(</span><span class="n">MATCH</span> <span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="n">dev</span><span class="p">)</span> <span class="n">RETURN</span> <span class="n">n</span><span class="p">)</span> <span class="k">as</span> <span class="n">dev</span> 
+<span class="n">WHERE</span> <span class="n">history</span><span class="o">.</span><span class="n">year</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">n</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;year&#39;</span><span class="p">)::</span><span class="nb">int</span><span class="p">;</span>
+  <span class="n">name</span>
+<span class="o">---------</span>
+  <span class="n">someone</span>
+<span class="p">(</span><span class="mi">1</span> <span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="sql-in-cypher">
+<h4><strong>SQL in Cypher</strong><a class="headerlink" href="#sql-in-cypher" title="Permalink to this heading"></a></h4>
+<p>When querying the content of the graph DB with the cypher queries, you can use the match and where clause when you want to search using specific data of the RDB. However, the resulting dataset in the SQL queries must be configured to return a single row of results.</p>
+<p>Syntex :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MATCH</span> <span class="p">[</span><span class="n">table</span>\<span class="n">_name</span><span class="p">]</span>
+<span class="n">WHERE</span> <span class="p">(</span><span class="n">column</span>\<span class="n">_name</span> <span class="n">operator</span> <span class="p">{</span><span class="n">value</span><span class="o">|</span><span class="n">SQLquery</span><span class="o">|</span><span class="n">CYPHERquery</span><span class="p">})</span>
+<span class="n">RETURN</span> <span class="p">[</span><span class="n">column</span>\<span class="n">_name</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>Example :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MATCH</span> <span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="n">dev</span><span class="p">)</span>
+<span class="n">WHERE</span> <span class="n">n</span><span class="o">.</span><span class="n">year</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">SELECT</span> <span class="n">year</span> <span class="n">FROM</span> <span class="n">history</span> <span class="n">WHERE</span> <span class="n">event</span> <span class="o">=</span> <span class="s1">&#39;AgensGraph&#39;</span><span class="p">)</span>
+<span class="n">RETURN</span> <span class="n">properties</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="n">AS</span> <span class="n">n</span><span class="p">;</span>
+                   <span class="n">n</span>
+<span class="o">-----------------------------------</span>\
+  <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;someone&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2015</span><span class="p">}</span>
+
+<span class="p">(</span><span class="mi">1</span> <span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section id="graph-data-import">
+<h1><strong>Graph Data Import</strong><a class="headerlink" href="#graph-data-import" title="Permalink to this heading"></a></h1>
+<p>This section introduces an example to import graph data from external foreign files.</p>
+<ol class="simple">
+<li><p>Install the extension ‘file_fdw’ necessary to use the AgensGraph foreign-data wrapper to interface with files on the server’s filesystem.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">EXTENSION</span> <span class="n">file</span>\<span class="n">_fdw</span><span class="p">;</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Create the data import server.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">SERVER</span> <span class="n">import</span>\<span class="n">_server</span> <span class="n">FOREIGN</span> <span class="n">DATA</span> <span class="n">WRAPPER</span> <span class="n">file</span>\<span class="n">_fdw</span><span class="p">;</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Create the foreign table to receive data from a foreign file.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">FOREIGN</span> <span class="n">TABLE</span> <span class="n">vlabel</span>\<span class="n">_profile</span> <span class="p">(</span><span class="nb">id</span> <span class="n">graphid</span><span class="p">,</span> <span class="n">properties</span> <span class="n">text</span><span class="p">)</span>
+<span class="n">SERVER</span> <span class="n">import</span>\<span class="n">_server</span>
+<span class="n">OPTIONS</span><span class="p">(</span> <span class="n">FORMAT</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">HEADER</span><span class="o">**</span> <span class="s1">&#39;false&#39;</span><span class="p">,</span> <span class="n">FILENAME</span> <span class="s1">&#39;/path/file.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span> <span class="n">E</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">FOREIGN</span> <span class="n">TABLE</span> <span class="n">elabel</span>\<span class="n">_profile</span> <span class="p">(</span><span class="nb">id</span> <span class="n">graphid</span><span class="p">,</span> <span class="n">start</span> <span class="n">graphid</span><span class="p">,</span> <span class="s2">&quot;end&quot;</span> <span class="n">graphid</span><span class="p">,</span> <span class="n">properties</span> <span class="n">text</span><span class="p">)</span>
+<span class="n">SERVER</span> <span class="n">import</span>\<span class="n">_server</span>
+<span class="n">OPTIONS</span><span class="p">(</span> <span class="n">FORMAT</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">HEADER</span><span class="o">**</span> <span class="s1">&#39;false&#39;</span><span class="p">,</span> <span class="n">FILENAME</span> <span class="s1">&#39;/path/file.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span> <span class="n">E</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This ‘properties text’ item should be written differently depending on the situation. See the following example.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">comments</span><span class="o">.</span><span class="n">csv</span>
+
+<span class="nb">id</span><span class="o">|</span><span class="n">creationDate</span><span class="o">|</span><span class="n">locationIP</span><span class="o">|</span><span class="n">browserUsed</span><span class="o">|</span><span class="n">content</span><span class="o">|</span><span class="n">length</span>       <span class="o">//</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">HEADER</span> <span class="n">of</span> <span class="n">CSV</span>
+<span class="mi">2473901162497</span><span class="o">|</span><span class="mi">1316237219961</span><span class="o">|</span><span class="mf">77.240.75.197</span><span class="o">|</span><span class="n">Firefox</span><span class="o">|</span><span class="n">yes</span><span class="o">|</span><span class="mi">3</span>
+<span class="mi">2473901162498</span><span class="o">|</span><span class="mi">1316225421570</span><span class="o">|</span><span class="mf">213.180.31.8</span><span class="o">|</span><span class="n">Firefox</span><span class="o">|</span><span class="n">thanks</span><span class="o">|</span><span class="mi">6</span>
+<span class="mi">4123168604165</span><span class="o">|</span><span class="mi">1345407771283</span><span class="o">|</span><span class="mf">41.203.141.129</span><span class="o">|</span><span class="n">Firefox</span><span class="o">|</span><span class="n">LOL</span><span class="o">|</span><span class="mi">3</span>
+</pre></div>
+</div>
+<p>In this case, the schema of foreign table should be as follows.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">create</span> <span class="n">foreign</span> <span class="n">table</span> <span class="n">comments</span>\<span class="n">_profile</span>
+
+<span class="p">(</span>
+  <span class="nb">id</span> <span class="n">int8</span><span class="p">,</span>
+  <span class="n">creationDate</span> <span class="n">int8</span><span class="p">,</span>
+  <span class="n">locationIP</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span>
+  <span class="n">browserUsed</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span>
+  <span class="n">content</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">2000</span><span class="p">),</span>
+  <span class="n">length</span> <span class="n">int4</span>
+<span class="p">)</span>
+
+<span class="n">server</span> <span class="n">import</span>\<span class="n">_server</span>
+
+<span class="n">options</span>
+
+<span class="p">(</span>
+  <span class="n">FORMAT</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span>
+  <span class="n">HEADER</span> <span class="s1">&#39;true&#39;</span><span class="p">,</span>     <span class="o">//</span><span class="n">Indicates</span> <span class="n">the</span> <span class="n">presence</span> <span class="n">of</span> <span class="n">a</span> <span class="n">csv</span> <span class="n">header</span>
+  <span class="n">DELIMITER</span> <span class="s1">&#39;|&#39;</span><span class="p">,</span>
+  <span class="n">NULL</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="n">FILENAME</span> <span class="s1">&#39;/path/to/comments.csv&#39;</span>
+  <span class="p">);</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Execute the import. The data must be cast as type JSONB, since vertices and edges in AgensGraph are stored in the JSONB format.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">VLABEL</span> <span class="n">test</span>\<span class="n">_vlabel</span><span class="p">;</span>
+
+<span class="n">LOAD</span> <span class="n">FROM</span> <span class="n">vlabel</span>\<span class="n">_profile</span> <span class="n">AS</span> <span class="n">profile</span>\<span class="n">_name</span> 
+<span class="o">**</span><span class="n">CREATE</span><span class="o">**</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">test</span>\<span class="n">_vlabel</span> <span class="o">=</span><span class="n">to</span>\<span class="n">_jsonb</span><span class="p">(</span><span class="n">row</span>\<span class="n">_to</span>\<span class="n">_json</span><span class="p">(</span><span class="n">profile</span>\<span class="n">_name</span><span class="p">)));</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">ELABEL</span> <span class="n">test</span>\<span class="n">_elabel</span><span class="p">;</span>
+
+<span class="n">LOAD</span> <span class="n">FROM</span> <span class="n">elabel</span>\<span class="n">_profile</span> <span class="n">AS</span> <span class="n">profile</span>\<span class="n">_name</span>
+<span class="n">MATCH</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">test</span>\<span class="n">_vlabel</span><span class="p">),</span> <span class="p">(</span><span class="n">b</span><span class="p">:</span><span class="n">test</span>\<span class="n">_vlabel</span><span class="p">)</span>
+<span class="n">WHERE</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">to</span>\<span class="n">_jsonb</span><span class="p">(</span><span class="n">profile</span>\<span class="n">_name</span><span class="p">)</span><span class="o">.</span><span class="n">start</span> <span class="n">AND</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">to</span>\<span class="n">_jsonb</span><span class="p">(</span><span class="n">profile</span>\<span class="n">_name</span><span class="p">)</span><span class="o">.</span><span class="n">end</span>
+<span class="n">CREATE</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">-</span><span class="p">[:</span><span class="n">test</span>\<span class="n">_elabel</span><span class="p">]</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Following the example above, you can do the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">VLABEL</span> <span class="n">comments</span><span class="p">;</span>
+
+<span class="n">LOAD</span> <span class="n">FROM</span> <span class="n">comments</span>\<span class="n">_profile</span> <span class="n">AS</span> <span class="n">ROW</span>
+<span class="n">CREATE</span> <span class="p">(:</span><span class="n">comments</span> <span class="o">=</span><span class="n">to</span>\<span class="n">_jsonb</span><span class="p">(</span><span class="n">row</span>\<span class="n">_to</span>\<span class="n">_json</span><span class="p">(</span><span class="n">row</span><span class="p">)));</span>
+</pre></div>
+</div>
+<section id="indexes-with-data-import">
+<h2><strong>Indexes with Data Import</strong><a class="headerlink" href="#indexes-with-data-import" title="Permalink to this heading"></a></h2>
+<p>The cost of maintaining indexes during bulk insertion is very expensive. AgensGraph provides grammars to toggle indexes by disabling them temporarily and reindexing them later. The disabled indexes do not interfere with bulk inserts. After bulk data import, the option REINDEX LABEL can be used. It will take some time but it is much faster than bulk insert with valid indexes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">VLABEL</span> <span class="n">test</span>\<span class="n">_vlabel</span> <span class="n">DISABLE</span> <span class="n">INDEX</span><span class="p">;</span>
+<span class="n">OR</span>
+<span class="n">CREATE</span> <span class="n">VLABEL</span> <span class="n">test</span>\<span class="n">_vlabel</span><span class="p">;</span>
+
+<span class="n">ALTER</span> <span class="n">VLABEL</span> <span class="n">test</span>\<span class="n">_vlabel</span> <span class="n">DISABLE</span> <span class="n">INDEX</span><span class="p">;</span>
+
+<span class="o">--</span> <span class="n">DATA</span> <span class="n">IMPORT</span> 
+<span class="n">REINDEX</span> <span class="n">VLABEL</span> <span class="n">test</span>\<span class="n">_vlabel</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tools">
+<h1><strong>Tools</strong><a class="headerlink" href="#tools" title="Permalink to this heading"></a></h1>
+<section id="command-line-interface-tool">
+<h2><strong>Command Line Interface Tool</strong><a class="headerlink" href="#command-line-interface-tool" title="Permalink to this heading"></a></h2>
+<p>AgensGraph has a command line interface tool called <em>agens</em>. Users can query and maintain AgensGraph using <em>agens</em> efficiently.</p>
+<blockquote>
+<div><p><em>Note: agens is based on psql (the PostgreSQL interactive command line tool) so that all features of psql can be used in AgensGraph too.</em></p>
+</div></blockquote>
+<section id="meta-command">
+<h3><strong>Meta Command</strong><a class="headerlink" href="#meta-command" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  \<span class="n">dG</span><span class="p">[</span><span class="o">+</span><span class="p">]</span>   <span class="p">[</span><span class="n">PATTERN</span><span class="p">]</span>     <span class="nb">list</span> <span class="n">graphs</span>
+  \<span class="n">dGe</span><span class="p">[</span><span class="o">+</span><span class="p">]</span>  <span class="p">[</span><span class="n">PATTERN</span><span class="p">]</span>     <span class="nb">list</span> <span class="n">graph</span> <span class="n">edge</span> <span class="n">labels</span>
+  \<span class="n">dGl</span><span class="p">[</span><span class="o">+</span><span class="p">]</span>  <span class="p">[</span><span class="n">PATTERN</span><span class="p">]</span>     <span class="nb">list</span> <span class="n">graph</span> <span class="n">labels</span>
+  \<span class="n">dGv</span><span class="p">[</span><span class="o">+</span><span class="p">]</span>  <span class="p">[</span><span class="n">PATTERN</span><span class="p">]</span>     <span class="nb">list</span> <span class="n">graph</span> <span class="n">vertex</span> <span class="n">labels</span>
+  \<span class="n">dGi</span><span class="p">[</span><span class="o">+</span><span class="p">]</span>  <span class="p">[</span><span class="n">PATTERN</span><span class="p">]</span>     <span class="nb">list</span> <span class="n">graph</span> <span class="nb">property</span> <span class="n">indexes</span>
+</pre></div>
+</div>
+<p><em>agens</em> supports the above additional meta-commands for administration and scripting. You can obtain a list of graph or labels. If + is appended to the command, each object is listed with its associated permissions and description, if any. If <em>pattern</em> is specified, only objects whose name match the pattern are listed.</p>
+</section>
+</section>
+</section>
+<section id="client-drivers">
+<h1><strong>Client Drivers</strong><a class="headerlink" href="#client-drivers" title="Permalink to this heading"></a></h1>
+<section id="java-driver">
+<h2><strong>Java Driver</strong><a class="headerlink" href="#java-driver" title="Permalink to this heading"></a></h2>
+<section id="id4">
+<h3><strong>Introduction</strong><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>This section briefly explains how to process graph data through AgensGraph to Java application developers.</p>
+<p>AgensGraph’s JDBC driver is based on the PostgreSQL JDBC Driver and offers a way for the Java application developer to access the Agensgraph database in their applications. The API of the AgensGraph Java Driver and Postgres JDBC Driver are very similar. The only difference is that AgensGraph uses the Cypher query language instead of SQL and utilizes graph data (vertices, edges and paths) as data types.</p>
+</section>
+<section id="usage-of-the-java-driver">
+<h3><strong>Usage of the Java Driver</strong><a class="headerlink" href="#usage-of-the-java-driver" title="Permalink to this heading"></a></h3>
+<section id="get-the-driver">
+<h4><strong>Get the Driver</strong><a class="headerlink" href="#get-the-driver" title="Permalink to this heading"></a></h4>
+<p>You can download the precompiled driver(jar) from <a class="reference external" href="http://bitnine.net/downloads">Download link</a> or use maven as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">dependencies</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+  <span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">net</span><span class="o">.</span><span class="n">bitnine</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">agensgraph</span><span class="o">-</span><span class="n">jdbc</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">1.4.2</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">dependencies</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>You can search the latest version on <a class="reference external" href="http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22net.bitnine%22%20AND%20a%3A%22agensgraph-jdbc%22">The Central Repository with Groupld and Artifactld</a>.</p>
+</section>
+<section id="connection">
+<h4><strong>Connection</strong><a class="headerlink" href="#connection" title="Permalink to this heading"></a></h4>
+<p>To connect to AgensGraph using the Java Driver, we need two things: the name of the class to be loaded into the Java Driver and the connection string.</p>
+<ul class="simple">
+<li><p>The name of the class is <code class="docutils literal notranslate"><span class="pre">net.bitnine.agensgraph.Driver</span></code>.</p></li>
+<li><p>The connection string consists of the sub-protocol, server, port, database.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">jdbc:agensgraph://</span></code>is the sub-protocol to use a particular Driver and a hold value.</p></li>
+<li><p>It is written as <code class="docutils literal notranslate"><span class="pre">jdbc:agensgraph://server:port/database</span></code>, including the sub-protocol.</p></li>
+</ul>
+</li>
+</ul>
+<p>The following code is an example of how to connect AgensGraph. It connects to AgensGraph through the <code class="docutils literal notranslate"><span class="pre">Connection</span></code> object and is ready to be queried.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.sql.DriverManager</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.Connection</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">AgensGraphTest</span> <span class="p">{</span>
+  <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span><span class="p">{</span>
+      <span class="n">Class</span><span class="o">.</span><span class="n">forName</span><span class="p">(</span><span class="s2">&quot;net.bitnine.agensgraph.Driver&quot;</span><span class="p">);</span>
+      <span class="n">String</span> <span class="n">connectionString</span> <span class="o">=</span> <span class="s2">&quot;jdbc:agensgraph://127.0.0.1:5432/agens&quot;</span><span class="p">;</span>
+      <span class="n">String</span> <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span><span class="p">;</span>
+      <span class="n">String</span> <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span><span class="p">;</span>
+      <span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">DriverManager</span><span class="o">.</span><span class="n">getConnection</span><span class="p">(</span><span class="n">connectionString</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+      <span class="o">...</span>
+  <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="ne">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">e</span><span class="o">.</span><span class="n">printStackTrace</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="retrieving-data">
+<h4><strong>Retrieving Data</strong><a class="headerlink" href="#retrieving-data" title="Permalink to this heading"></a></h4>
+<p>This example illustrates how to export Graph data using MATCH.</p>
+<p>A Cypher query is executed using <code class="docutils literal notranslate"><span class="pre">executeQuery()</span></code>. The output is a <code class="docutils literal notranslate"><span class="pre">ResultSet</span></code> object, which is the same output format found in the JDBC driver. The output of the query is the ‘vertex’ type of AgensGraph. Java Driver returns this output as a Vertex instance. Because the Vertex class is a sub-class of <code class="docutils literal notranslate"><span class="pre">Jsonb</span></code>, users can obtain information from the property fields.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.sql.DriverManager</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.Connection</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.Statement</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.ResultSet</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">net.bitnine.agensgraph.graph.Vertex</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">AgensGraphTest</span> <span class="p">{</span>
+  <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span><span class="p">{</span>
+      <span class="o">...</span>
+      <span class="n">Statement</span> <span class="n">stmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">createStatement</span><span class="p">();</span>
+      <span class="n">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">stmt</span><span class="o">.</span><span class="n">executeQuery</span><span class="p">(</span>
+            <span class="s2">&quot;MATCH (:Person {name: &#39;John&#39;})-[:knows]-(friend:Person)&quot;</span> <span class="o">+</span>
+            <span class="s2">&quot;RETURN friend&quot;</span><span class="p">);</span>
+          <span class="k">while</span> <span class="p">(</span><span class="n">rs</span><span class="o">.</span><span class="n">next</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">Vertex</span> <span class="n">friend</span> <span class="o">=</span> <span class="p">(</span><span class="n">Vertex</span><span class="p">)</span><span class="n">rs</span><span class="o">.</span><span class="n">getObject</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">friend</span><span class="o">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">));</span>
+            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">friend</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">));</span>
+          <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="ne">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                  <span class="n">e</span><span class="o">.</span><span class="n">printStackTrace</span><span class="p">();</span>
+          <span class="p">}</span>
+
+    <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-data">
+<h4><strong>Creating Data</strong><a class="headerlink" href="#creating-data" title="Permalink to this heading"></a></h4>
+<p>The following example illustrates how to insert a vertex with a label Person into AgensGraph. Users can input a property of a vertex using strings in Cypher queries. They can also be bound after making a Jsonb.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.sql.DriverManager</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.Connection</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.PreparedStatement</span><span class="p">;</span>
+
+<span class="n">import</span><span class="o">**</span> <span class="n">net</span><span class="o">.</span><span class="n">bitnine</span><span class="o">.</span><span class="n">agensgraph</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">Jsonb</span><span class="p">;</span>
+<span class="n">import</span><span class="o">**</span> <span class="n">net</span><span class="o">.</span><span class="n">bitnine</span><span class="o">.</span><span class="n">agensgraph</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">JsonbUtil</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">AgensGraphTest</span> <span class="p">{</span>
+  <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="n">PreparedStatement</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">prepareStatement</span><span class="p">(</span><span class="s2">&quot;CREATE (:person ?)&quot;</span><span class="p">);</span>
+        <span class="n">Jsonb</span> <span class="n">john</span> <span class="o">=</span> <span class="n">JsonbUtil</span><span class="o">.</span><span class="n">createObjectBuilder</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;from&quot;</span><span class="p">,</span> <span class="s2">&quot;USA&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">build</span><span class="p">();</span>
+      <span class="n">pstmt</span><span class="o">.</span><span class="n">setObject</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">john</span><span class="p">);</span>
+      <span class="n">pstmt</span><span class="o">.</span><span class="n">execute</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The following is generated as a string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;CREATE (:Person {name: &#39;John&#39;, from: &#39;USA&#39;, age: 17})&quot;</span>
+</pre></div>
+</div>
+<p>[Reference]
+In JDBC, the question mark (?) is the placeholder for the positional parameters of a PreparedStatement. There are, however, a number of SQL operators that contain a question mark. To avoid confusion, when used in a prepared statement, it must be used with spaces.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="AgensGraph Guide &amp; Manual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../AgensGraph%20Developer%20Manual%20v2.14.0/AgensGraph%20Developer%20Manual%20v2.14.0.html" class="btn btn-neutral float-right" title="AgensGraph Developer Manual" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Bitnine Global.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
